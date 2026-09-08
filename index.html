@@ -30,7 +30,12 @@
       "@id": "https://minisitee.com/#organizacao",
       "name": "minisitee",
       "url": "https://minisitee.com/",
-      "logo": "https://minisitee.com/favicon.svg",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://minisitee.com/logo.png",
+        "width": 512,
+        "height": 512
+      },
       "description": "Catálogo em um link para quem vende pelo Instagram e pelo WhatsApp."
     },
     {
@@ -44,7 +49,10 @@
       }
     },
     {
-      "@type": "WebPage",
+      "@type": [
+        "WebPage",
+        "FAQPage"
+      ],
       "@id": "https://minisitee.com/#pagina",
       "url": "https://minisitee.com/",
       "name": "minisitee — transforme seu Instagram em uma máquina de vendas",
@@ -54,8 +62,71 @@
       "about": {
         "@id": "https://minisitee.com/#produto"
       },
-      "primaryImageOfPage": "https://minisitee.com/og.png",
-      "inLanguage": "pt-BR"
+      "primaryImageOfPage": {
+        "@type": "ImageObject",
+        "url": "https://minisitee.com/og.png",
+        "width": 1200,
+        "height": 630
+      },
+      "inLanguage": "pt-BR",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso saber mexer com site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Você escolhe um bloco, preenche os campos e ele aparece no seu minisitee. É o mesmo esforço de postar um story."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso comprar um domínio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Seu endereço é minisitee.com/seunome, já com https, e funciona no mesmo instante em que você cria a conta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá para usar pelo celular?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim — o painel e o minisitee foram desenhados primeiro para o celular. Não existe app para instalar: é tudo pelo navegador."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O cliente paga dentro do minisitee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O minisitee mostra o catálogo e leva a conversa para o WhatsApp, onde você combina pagamento e entrega do seu jeito."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso trocar o estilo depois?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quantas vezes quiser. São seis estilos prontos — claro, escuro, areia, menta, oceano e rosa — e a troca vale na hora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona a cobrança do Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "São R$ 97 uma vez por ano, renovados automaticamente. Se cancelar, seu minisitee continua no ar no plano Free, com os limites dele — nada é apagado, e dá para voltar ao Pro quando quiser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Atende cliente de fora do Brasil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Seu minisitee fala português, inglês e espanhol, e o WhatsApp aceita o código de qualquer país."
+          }
+        }
+      ]
     },
     {
       "@type": "SoftwareApplication",
@@ -112,71 +183,6 @@
             "billingDuration": 1,
             "billingIncrement": 1,
             "unitCode": "ANN"
-          }
-        }
-      ]
-    },
-    {
-      "@type": "FAQPage",
-      "@id": "https://minisitee.com/#duvidas",
-      "isPartOf": {
-        "@id": "https://minisitee.com/#pagina"
-      },
-      "mainEntity": [
-        {
-          "@type": "Question",
-          "name": "Preciso saber mexer com site?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. Você escolhe um bloco, preenche os campos e ele aparece no seu minisitee. É o mesmo esforço de postar um story."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Preciso comprar um domínio?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. Seu endereço é minisitee.com/seunome, já com https, e funciona no mesmo instante em que você cria a conta."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Dá para usar pelo celular?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim — o painel e o minisitee foram desenhados primeiro para o celular. Não existe app para instalar: é tudo pelo navegador."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "O cliente paga dentro do minisitee?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Não. O minisitee mostra o catálogo e leva a conversa para o WhatsApp, onde você combina pagamento e entrega do seu jeito."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Posso trocar o estilo depois?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Quantas vezes quiser. São seis estilos prontos — claro, escuro, areia, menta, oceano e rosa — e a troca vale na hora."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Como funciona a cobrança do Pro?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "São R$ 97 uma vez por ano, renovados automaticamente. Se cancelar, seu minisitee continua no ar no plano Free, com os limites dele — nada é apagado, e dá para voltar ao Pro quando quiser."
-          }
-        },
-        {
-          "@type": "Question",
-          "name": "Atende cliente de fora do Brasil?",
-          "acceptedAnswer": {
-            "@type": "Answer",
-            "text": "Sim. Seu minisitee fala português, inglês e espanhol, e o WhatsApp aceita o código de qualquer país."
           }
         }
       ]
