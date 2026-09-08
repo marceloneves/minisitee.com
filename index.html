@@ -1,0 +1,763 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>minisitee — transforme seu Instagram em uma máquina de vendas</title>
+<meta name="description" content="Transforme seu Instagram em uma máquina de vendas: catálogo com foto e preço, botão de WhatsApp, horário e endereço em um link só na bio. Pronto hoje, sem site e sem código.">
+<meta name="theme-color" content="#ffffff">
+<link rel="canonical" href="https://minisitee.com/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="styles.css">
+
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://minisitee.com/">
+<meta property="og:site_name" content="minisitee">
+<meta property="og:title" content="Transforme seu Instagram em uma máquina de vendas">
+<meta property="og:description" content="Catálogo com foto e preço, botão de WhatsApp, horário e endereço — tudo em um link só na bio.">
+<meta property="og:image" content="https://minisitee.com/og.png">
+<meta name="twitter:card" content="summary_large_image">
+
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "Organization",
+      "@id": "https://minisitee.com/#organizacao",
+      "name": "minisitee",
+      "url": "https://minisitee.com/",
+      "logo": "https://minisitee.com/favicon.svg",
+      "description": "Catálogo em um link para quem vende pelo Instagram e pelo WhatsApp."
+    },
+    {
+      "@type": "WebSite",
+      "@id": "https://minisitee.com/#site",
+      "url": "https://minisitee.com/",
+      "name": "minisitee",
+      "inLanguage": "pt-BR",
+      "publisher": {
+        "@id": "https://minisitee.com/#organizacao"
+      }
+    },
+    {
+      "@type": "WebPage",
+      "@id": "https://minisitee.com/#pagina",
+      "url": "https://minisitee.com/",
+      "name": "minisitee — transforme seu Instagram em uma máquina de vendas",
+      "isPartOf": {
+        "@id": "https://minisitee.com/#site"
+      },
+      "about": {
+        "@id": "https://minisitee.com/#produto"
+      },
+      "primaryImageOfPage": "https://minisitee.com/og.png",
+      "inLanguage": "pt-BR"
+    },
+    {
+      "@type": "SoftwareApplication",
+      "@id": "https://minisitee.com/#produto",
+      "name": "minisitee",
+      "applicationCategory": "BusinessApplication",
+      "applicationSubCategory": "Criador de catálogo e link na bio",
+      "operatingSystem": "Web",
+      "url": "https://minisitee.com/",
+      "image": "https://minisitee.com/og.png",
+      "inLanguage": [
+        "pt-BR",
+        "en",
+        "es"
+      ],
+      "description": "Transforme seu Instagram em uma máquina de vendas: catálogo com foto e preço, botão de WhatsApp, horário e endereço em um link só na bio.",
+      "publisher": {
+        "@id": "https://minisitee.com/#organizacao"
+      },
+      "featureList": [
+        "Produto com foto, preço e endereço próprio",
+        "Botão de WhatsApp com mensagem pronta",
+        "Botão de ligar",
+        "Link para qualquer endereço",
+        "Redes sociais",
+        "Horário de funcionamento",
+        "Endereço com mapa",
+        "Galeria de fotos",
+        "Perguntas frequentes",
+        "Download de arquivo",
+        "Contagem regressiva",
+        "Seis estilos de minisitee"
+      ],
+      "offers": [
+        {
+          "@type": "Offer",
+          "name": "Free",
+          "price": "0",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock",
+          "description": "Até 3 itens no catálogo, com a marca do minisitee no rodapé"
+        },
+        {
+          "@type": "Offer",
+          "name": "Pro",
+          "price": "97.00",
+          "priceCurrency": "BRL",
+          "availability": "https://schema.org/InStock",
+          "description": "Itens ilimitados e sem a marca do minisitee no rodapé",
+          "priceSpecification": {
+            "@type": "UnitPriceSpecification",
+            "price": "97.00",
+            "priceCurrency": "BRL",
+            "billingDuration": 1,
+            "billingIncrement": 1,
+            "unitCode": "ANN"
+          }
+        }
+      ]
+    },
+    {
+      "@type": "FAQPage",
+      "@id": "https://minisitee.com/#duvidas",
+      "isPartOf": {
+        "@id": "https://minisitee.com/#pagina"
+      },
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Preciso saber mexer com site?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Você escolhe um bloco, preenche os campos e ele aparece no seu minisitee. É o mesmo esforço de postar um story."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Preciso comprar um domínio?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. Seu endereço é minisitee.com/seunome, já com https, e funciona no mesmo instante em que você cria a conta."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Dá para usar pelo celular?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim — o painel e o minisitee foram desenhados primeiro para o celular. Não existe app para instalar: é tudo pelo navegador."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "O cliente paga dentro do minisitee?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Não. O minisitee mostra o catálogo e leva a conversa para o WhatsApp, onde você combina pagamento e entrega do seu jeito."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Posso trocar o estilo depois?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Quantas vezes quiser. São seis estilos prontos — claro, escuro, areia, menta, oceano e rosa — e a troca vale na hora."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Como funciona a cobrança do Pro?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "São R$ 97 uma vez por ano, renovados automaticamente. Se cancelar, seu minisitee continua no ar no plano Free, com os limites dele — nada é apagado, e dá para voltar ao Pro quando quiser."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Atende cliente de fora do Brasil?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Sim. Seu minisitee fala português, inglês e espanhol, e o WhatsApp aceita o código de qualquer país."
+          }
+        }
+      ]
+    }
+  ]
+}
+</script>
+</head>
+<body>
+
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+
+<header class="cabecalho" id="cabecalho">
+  <div class="faixa">
+    <a class="marca" href="#topo" aria-label="minisitee — início">
+      <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9"/>
+        <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
+              fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+      </svg>
+      <span class="marca-nome">minisit<span>ee</span></span>
+    </a>
+
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#oque">O que é</a>
+      <a href="#oque">O que é</a>
+      <a href="#blocos">Recursos</a>
+      <a href="#como">Como funciona</a>
+      <a href="#precos">Preços</a>
+      <a href="#duvidas">Dúvidas</a>
+      <a class="btn btn-fantasma menu-entrar" href="https://app.minisitee.com/login">Entrar</a>
+      <a class="btn btn-solido menu-criar" href="https://app.minisitee.com/login">Criar meu minisitee</a>
+    </nav>
+
+    <button class="hamburguer" id="hamburguer" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
+  </div>
+</header>
+
+<main id="conteudo">
+
+  <!-- ================= HERO ================= -->
+  <section class="hero" id="topo">
+    <div class="limite hero-grade">
+      <div class="hero-texto">
+        <p class="etiqueta">Para quem vende pelo Instagram e pelo WhatsApp</p>
+        <h1>Transforme seu Instagram<br class="quebra"> em uma <span class="destaque">máquina de vendas</span>.</h1>
+        <p class="chamada">
+          Catálogo com foto e preço, botão de WhatsApp, horário e endereço —
+          tudo em um link só na bio. Fica pronto hoje, sem site e sem código.
+        </p>
+
+        <form class="captura" id="formUsuario" novalidate>
+          <label class="captura-campo" for="usuario">
+            <span class="captura-prefixo">minisitee.com/</span>
+            <input id="usuario" name="usuario" type="text" inputmode="latin"
+                   autocomplete="off" autocapitalize="none" spellcheck="false"
+                   placeholder="seunome" aria-label="Escolha seu endereço no minisitee">
+          </label>
+          <button class="btn btn-solido" type="submit">Criar grátis</button>
+        </form>
+        <p class="captura-nota" id="notaUsuario">Grátis para começar. Sem cartão, sem instalar nada.</p>
+
+        <ul class="selos">
+          <li>Pronto em minutos</li>
+          <li>Funciona em qualquer celular</li>
+          <li>Português, inglês e espanhol</li>
+        </ul>
+      </div>
+
+      <div class="hero-visual" aria-hidden="true">
+        <div class="brilho"></div>
+
+        <div class="telefone" id="telefone" data-tema="light">
+          <div class="tela">
+            <div class="tela-topo">
+              <span class="barra-url"><span id="urlPreview">minisitee.com/seunome</span></span>
+            </div>
+
+            <div class="tela-rolagem">
+              <div class="tela-conteudo">
+                <div class="perfil">
+                  <div class="avatar">DA</div>
+                  <p class="perfil-nome">Doceria da Ana</p>
+                  <p class="perfil-sub">Bolos e doces artesanais · Campinas</p>
+                </div>
+
+                <a class="zap" href="#precos" tabindex="-1">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.3A10 10 0 1 0 12 2Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
+                  Chamar no WhatsApp
+                </a>
+
+                <div class="itens">
+                  <div class="item">
+                    <div class="foto foto-a"></div>
+                    <p class="item-cat">Bolos</p>
+                    <p class="item-nome">Bolo de cenoura</p>
+                    <p class="item-preco">R$ 68,00</p>
+                  </div>
+                  <div class="item">
+                    <div class="foto foto-b"></div>
+                    <p class="item-cat">Doces</p>
+                    <p class="item-nome">Caixa com 12 brigadeiros</p>
+                    <p class="item-preco">R$ 42,00</p>
+                  </div>
+                  <div class="item">
+                    <div class="foto foto-c"></div>
+                    <p class="item-cat">Bolos</p>
+                    <p class="item-nome">Red velvet inteiro</p>
+                    <p class="item-preco">R$ 95,00</p>
+                  </div>
+                  <div class="item">
+                    <div class="foto foto-d"></div>
+                    <p class="item-cat">Festas</p>
+                    <p class="item-nome">Kit festa 30 pessoas</p>
+                    <p class="item-preco">R$ 320,00</p>
+                  </div>
+                  <div class="item">
+                    <div class="foto foto-e"></div>
+                    <p class="item-cat">Doces</p>
+                    <p class="item-nome">Cento de docinhos</p>
+                    <p class="item-preco">R$ 180,00</p>
+                  </div>
+                  <div class="item">
+                    <div class="foto foto-f"></div>
+                    <p class="item-cat">Café</p>
+                    <p class="item-nome">Torta de limão</p>
+                    <p class="item-preco">R$ 12,00 <span>/ fatia</span></p>
+                  </div>
+                </div>
+
+                <div class="bloco-linha">
+                  <p class="bloco-titulo">Horário de hoje</p>
+                  <p class="bloco-valor">09:00 — 18:00</p>
+                </div>
+
+                <div class="bloco-linha">
+                  <p class="bloco-titulo">Onde ficamos</p>
+                  <p class="bloco-valor">Rua das Flores, 220</p>
+                </div>
+
+                <div class="mapa"><span>Ver rota no mapa</span></div>
+
+                <p class="secao-mock">Galeria</p>
+                <div class="galeria">
+                  <span class="foto-b"></span><span class="foto-d"></span><span class="foto-a"></span>
+                  <span class="foto-f"></span><span class="foto-c"></span><span class="foto-e"></span>
+                </div>
+
+                <p class="secao-mock">Perguntas frequentes</p>
+                <div class="faq-mock">
+                  <p>Vocês entregam? <span>+</span></p>
+                  <p>Aceita Pix? <span>+</span></p>
+                  <p>Faz bolo sem glúten? <span>+</span></p>
+                </div>
+
+                <div class="arquivo-mock">
+                  <span class="arquivo-icone">PDF</span>
+                  <span>Cardápio completo<br><small>1,2 MB</small></span>
+                </div>
+
+                <div class="redes">
+                  <span></span><span></span><span></span><span></span>
+                </div>
+
+                <p class="rodape-mock">feito com minisitee</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= O QUE É ================= -->
+  <section class="secao" id="oque">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">O que é</p>
+        <h2>Afinal, o que é um minisitee?</h2>
+      </header>
+
+      <div class="definicao">
+        <p class="definicao-frase">
+          É uma página só sua, em <strong>minisitee.com/seunome</strong>, que reúne tudo o que o
+          cliente precisa saber antes de comprar: seus produtos com foto e preço, seu WhatsApp,
+          seu horário e seu endereço. Um link só — o mesmo que você cola na bio do Instagram.
+        </p>
+        <p class="definicao-nota">
+          Não é loja virtual, porque o pagamento não acontece nela. Não é site, porque você não
+          configura domínio, tema nem hospedagem. É o pedaço que faltava entre o seu post e a
+          conversa no WhatsApp.
+        </p>
+      </div>
+
+      <div class="jornada">
+        <figure class="cena">
+          <div class="mini mini-bio">
+            <div class="bio-perfil">
+              <span class="bio-avatar">DA</span>
+              <div>
+                <p class="bio-user">@doceriadaana</p>
+                <p class="bio-txt">Bolos e doces · Campinas</p>
+              </div>
+            </div>
+            <p class="bio-link">minisitee.com/doceriadaana</p>
+            <div class="bio-grade">
+              <span class="foto-a"></span><span class="foto-b"></span><span class="foto-c"></span>
+              <span class="foto-d"></span><span class="foto-e"></span><span class="foto-f"></span>
+            </div>
+          </div>
+          <figcaption><strong>O post</strong>Alguém vê seu produto no Instagram e quer saber o preço</figcaption>
+        </figure>
+
+        <span class="seta" aria-hidden="true">→</span>
+
+        <figure class="cena">
+          <div class="mini mini-site">
+            <div class="site-topo">minisitee.com/doceriadaana</div>
+            <div class="site-perfil">
+              <span class="site-avatar">DA</span>
+              <p class="site-nome">Doceria da Ana</p>
+            </div>
+            <p class="site-zap">Chamar no WhatsApp</p>
+            <div class="site-itens">
+              <div><span class="foto-a"></span><p>Bolo de cenoura</p><strong>R$ 68,00</strong></div>
+              <div><span class="foto-b"></span><p>12 brigadeiros</p><strong>R$ 42,00</strong></div>
+            </div>
+          </div>
+          <figcaption><strong>O catálogo</strong>Toca no link da bio e vê produto, preço, horário e endereço</figcaption>
+        </figure>
+
+        <span class="seta" aria-hidden="true">→</span>
+
+        <figure class="cena">
+          <div class="mini mini-zap">
+            <div class="zap-topo">
+              <span class="zap-avatar">M</span>
+              <div>
+                <p class="zap-nome">Marina Costa</p>
+                <p class="zap-status">online</p>
+              </div>
+            </div>
+            <p class="balao balao-in">Oi! Quero o bolo de cenoura de R$ 68 para sábado 🙂</p>
+            <p class="balao balao-out">Fechado! Retira às 10h?</p>
+            <p class="balao balao-in">Perfeito</p>
+          </div>
+          <figcaption><strong>A venda</strong>Chega no seu WhatsApp já sabendo o que quer e quanto custa</figcaption>
+        </figure>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DOR ================= -->
+  <section class="secao secao-clara problema">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">O problema</p>
+        <h2>Vender só pelo direct custa caro</h2>
+        <p class="sub">Cada pergunta que se repete é uma venda que demora — e às vezes é uma venda que não acontece.</p>
+      </header>
+
+      <div class="par">
+        <article class="carta carta-antes">
+          <p class="carta-tag">Sem o minisitee</p>
+          <ul class="lista-x">
+            <li>“Quanto custa?” dez vezes por dia, no direct</li>
+            <li>Tabela de preços em print, sempre desatualizada</li>
+            <li>Um link na bio que só leva a um lugar</li>
+            <li>Cliente perguntando o endereço e o horário de novo</li>
+          </ul>
+        </article>
+        <article class="carta carta-depois">
+          <p class="carta-tag">Com o minisitee</p>
+          <ul class="lista-v">
+            <li>Preço e foto de cada produto no seu minisitee, sempre no ar</li>
+            <li>Você edita pelo celular e muda na hora</li>
+            <li>Um link que abre tudo: catálogo, contato e horário</li>
+            <li>O cliente chega no WhatsApp já sabendo o que quer</li>
+          </ul>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= BLOCOS ================= -->
+  <section class="secao" id="blocos">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Blocos</p>
+        <h2>Monte seu minisitee com o que você precisa</h2>
+        <p class="sub">Cada bloco entra, sai e muda de lugar com um toque. Sem código, sem tema para instalar.</p>
+      </header>
+
+      <ul class="grade-blocos">
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m3 14 4-4 4 4 3-3 7 6"/></svg>
+          </span>
+          <h3>Produto</h3>
+          <p>Foto, preço, categoria e um endereço próprio para compartilhar.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
+          </span>
+          <h3>Botão WhatsApp</h3>
+          <p>Abre a conversa com uma mensagem já escrita para o cliente.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg>
+          </span>
+          <h3>Botão de ligar</h3>
+          <p>Disca o seu número direto do celular do visitante.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+          </span>
+          <h3>Link</h3>
+          <p>Um botão para qualquer endereço: loja, formulário, portfólio.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>
+          </span>
+          <h3>Redes sociais</h3>
+          <p>Instagram, TikTok, YouTube e mais em uma linha de ícones.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <h3>Horário</h3>
+          <p>Os dias e as horas em que você atende, dia a dia.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          <h3>Endereço com mapa</h3>
+          <p>Onde você fica, com mapa e rota em um toque.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          </span>
+          <h3>Galeria de fotos</h3>
+          <p>Várias fotos em grade, para mostrar trabalho feito.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.5.2-.7.6-.7 1.1v.5"/><path d="M12 17h.01"/></svg>
+          </span>
+          <h3>Perguntas frequentes</h3>
+          <p>Respostas que abrem ao tocar — e param de chegar no direct.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M12 3v11"/><path d="m8 11 4 4 4-4"/><path d="M5 19h14"/></svg>
+          </span>
+          <h3>Download de arquivo</h3>
+          <p>Cardápio, tabela de preços, PDF — o visitante baixa na hora.</p>
+        </li>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </span>
+          <h3>Contagem regressiva</h3>
+          <p>O tempo que falta para a promoção, o lote ou a estreia.</p>
+        </li>
+        <li class="bloco bloco-cta">
+          <h3>E o resto?</h3>
+          <p>Foto de capa, bio, cidade, categorias e status de cada item — reservado, encerrado, rascunho.</p>
+          <a class="link-seta" href="https://app.minisitee.com/login">Ver na prática <span aria-hidden="true">→</span></a>
+        </li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= COMO FUNCIONA ================= -->
+  <section class="secao secao-clara" id="como">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Como funciona</p>
+        <h2>Três passos, um café</h2>
+        <p class="sub">Não tem editor complicado, domínio para configurar nem tema para escolher em uma loja.</p>
+      </header>
+
+      <ol class="passos">
+        <li class="passo">
+          <span class="numero">1</span>
+          <h3>Escolha seu endereço</h3>
+          <p>minisitee.com/<strong>seunome</strong>. Se estiver livre, é seu — e já vale para colocar na bio.</p>
+        </li>
+        <li class="passo">
+          <span class="numero">2</span>
+          <h3>Adicione os blocos</h3>
+          <p>Produtos com foto e preço, WhatsApp, horário, endereço. Tudo pelo celular, sem app para instalar.</p>
+        </li>
+        <li class="passo">
+          <span class="numero">3</span>
+          <h3>Cole o link na bio</h3>
+          <p>Instagram, TikTok, WhatsApp Business, cartão de visita. O cliente abre e já vê tudo.</p>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <!-- ================= PARA QUEM ================= -->
+  <section class="secao">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Para quem é</p>
+        <h2>Se o seu negócio cabe numa conversa, cabe num minisitee</h2>
+      </header>
+      <ul class="publico">
+        <li>Confeitaria e comida caseira</li>
+        <li>Loja de roupas no Instagram</li>
+        <li>Salão, barbearia e estética</li>
+        <li>Artesanato e brechó</li>
+        <li>Personal e nutricionista</li>
+        <li>Marmitas e delivery</li>
+        <li>Fotógrafo e freelancer</li>
+        <li>Assistência técnica</li>
+        <li>Aluguel de espaço</li>
+        <li>Autônomo de qualquer área</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- ================= PREÇOS ================= -->
+  <section class="secao secao-clara" id="precos">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Preços</p>
+        <h2>Comece de graça. Assine quando o catálogo crescer.</h2>
+        <p class="sub">Sem contrato e sem fidelidade — o cancelamento é um botão dentro do painel.</p>
+      </header>
+
+      <div class="planos">
+        <article class="plano">
+          <h3>Free</h3>
+          <p class="preco"><strong>R$ 0</strong><span>para sempre</span></p>
+          <p class="plano-sub">Para colocar o link na bio hoje mesmo.</p>
+          <ul class="lista-v">
+            <li>Seu endereço minisitee.com/seunome</li>
+            <li>Até 3 itens no catálogo</li>
+            <li>Todos os tipos de bloco</li>
+            <li>Os 6 estilos de minisitee</li>
+            <li>Marca do minisitee no rodapé</li>
+          </ul>
+          <a class="btn btn-contorno" href="https://app.minisitee.com/login">Criar conta grátis</a>
+        </article>
+
+        <article class="plano plano-destaque">
+          <p class="fita">Mais escolhido</p>
+          <h3>Pro</h3>
+          <p class="preco"><strong>R$ 97</strong><span>por ano</span></p>
+          <p class="plano-sub">Sai por R$ 8,08 por mês — para quem já vive de vender por ali.</p>
+          <ul class="lista-v">
+            <li>Tudo do Free</li>
+            <li><strong>Itens ilimitados</strong> no catálogo</li>
+            <li><strong>Sem a marca</strong> do minisitee no rodapé</li>
+            <li>Um minisitee só seu, do topo ao rodapé</li>
+            <li>Um pagamento por ano, cancele quando quiser</li>
+          </ul>
+          <a class="btn btn-solido" href="https://app.minisitee.com/login">Assinar o Pro</a>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= DÚVIDAS ================= -->
+  <section class="secao" id="duvidas">
+    <div class="limite limite-estreito">
+      <header class="titulo-secao">
+        <p class="etiqueta">Dúvidas</p>
+        <h2>O que costumam perguntar</h2>
+      </header>
+
+      <div class="faq">
+        <details name="faq">
+          <summary>Preciso saber mexer com site?</summary>
+          <div class="resposta"><p>Não. Você escolhe um bloco, preenche os campos e ele aparece no seu minisitee. É o mesmo esforço de postar um story.</p></div>
+        </details>
+        <details name="faq">
+          <summary>Preciso comprar um domínio?</summary>
+          <div class="resposta"><p>Não. Seu endereço é minisitee.com/seunome, já com https, e funciona no mesmo instante em que você cria a conta.</p></div>
+        </details>
+        <details name="faq">
+          <summary>Dá para usar pelo celular?</summary>
+          <div class="resposta"><p>Sim — o painel e o minisitee foram desenhados primeiro para o celular. Não existe app para instalar: é tudo pelo navegador.</p></div>
+        </details>
+        <details name="faq">
+          <summary>O cliente paga dentro do minisitee?</summary>
+          <div class="resposta"><p>Não. O minisitee mostra o catálogo e leva a conversa para o WhatsApp, onde você combina pagamento e entrega do seu jeito.</p></div>
+        </details>
+        <details name="faq">
+          <summary>Posso trocar o estilo depois?</summary>
+          <div class="resposta"><p>Quantas vezes quiser. São seis estilos prontos — claro, escuro, areia, menta, oceano e rosa — e a troca vale na hora.</p></div>
+        </details>
+        <details name="faq">
+          <summary>Como funciona a cobrança do Pro?</summary>
+          <div class="resposta"><p>São R$ 97 uma vez por ano, renovados automaticamente. Se cancelar, seu minisitee continua no ar no plano Free, com os limites dele — nada é apagado, e dá para voltar ao Pro quando quiser.</p></div>
+        </details>
+        <details name="faq">
+          <summary>Atende cliente de fora do Brasil?</summary>
+          <div class="resposta"><p>Sim. Seu minisitee fala português, inglês e espanhol, e o WhatsApp aceita o código de qualquer país.</p></div>
+        </details>
+      </div>
+    </div>
+  </section>
+
+  <!-- ================= CTA FINAL ================= -->
+  <section class="cta-final">
+    <div class="limite">
+      <h2>Seu minisitee pode estar no ar em dez minutos</h2>
+      <p>Crie o seu agora, coloque o link na bio e mande para um cliente hoje mesmo. Se não gostar, você perdeu dez minutos.</p>
+      <a class="btn btn-solido btn-grande" href="https://app.minisitee.com/login">Criar meu minisitee grátis</a>
+      <p class="cta-nota">Grátis para começar · Sem cartão de crédito</p>
+    </div>
+  </section>
+
+</main>
+
+<footer class="rodape">
+  <div class="limite rodape-grade">
+    <div class="rodape-marca">
+      <a class="marca" href="#topo" aria-label="minisitee — início">
+        <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9"/>
+          <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
+                fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        <span class="marca-nome">minisit<span>ee</span></span>
+      </a>
+      <p class="rodape-frase">Seu catálogo em um link, pronto para o Instagram.</p>
+      <p class="rodape-empresa">
+        minisitee é operado por <strong>[RAZÃO SOCIAL LTDA]</strong><br>
+        CNPJ [00.000.000/0001-00] · [Cidade/UF], Brasil
+      </p>
+    </div>
+
+    <nav aria-label="Produto">
+      <p class="rodape-titulo">Produto</p>
+      <a href="#blocos">Recursos</a>
+      <a href="#como">Como funciona</a>
+      <a href="#precos">Preços</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+
+    <nav aria-label="Conta">
+      <p class="rodape-titulo">Conta</p>
+      <a href="https://app.minisitee.com/login">Entrar</a>
+      <a href="https://app.minisitee.com/login">Criar conta</a>
+      <a href="mailto:suporte@minisitee.com">Suporte</a>
+    </nav>
+
+    <nav aria-label="Legal">
+      <p class="rodape-titulo">Legal</p>
+      <a href="termos.html">Termos de uso</a>
+      <a href="privacidade.html">Política de privacidade</a>
+      <a href="cookies.html">Política de cookies</a>
+      <a href="mailto:privacidade@minisitee.com">Encarregado de dados</a>
+    </nav>
+  </div>
+
+  <div class="limite rodape-fim">
+    <p>© <span id="ano">2026</span> minisitee · Todos os direitos reservados</p>
+    <p class="rodape-links">
+      <a href="termos.html">Termos</a>
+      <a href="privacidade.html">Privacidade</a>
+      <a href="cookies.html">Cookies</a>
+    </p>
+  </div>
+</footer>
+
+<script src="script.js" defer></script>
+</body>
+</html>
