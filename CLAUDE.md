@@ -36,6 +36,12 @@ Regras:
 - Escreva o log em português, na mesma linguagem do resto do projeto.
 - O log é parte do repositório e vai junto nos commits.
 
+## Publicação
+
+Publicar é só dar `git push` para o `main`. A VPS faz o deploy automático a
+partir do GitHub — não existe script de deploy manual, FTP nem rsync neste
+projeto, e não é preciso acessar o servidor.
+
 ## Convenções
 
 - Mensagens de commit em português, no imperativo
