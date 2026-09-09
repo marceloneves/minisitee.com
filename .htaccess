@@ -1,0 +1,21 @@
+# URLs sem .html
+#
+# O servidor é LiteSpeed, que lê este arquivo com a sintaxe do Apache.
+# Duas metades: redirecionar quem chega com .html para a URL limpa e,
+# internamente, servir o arquivo .html correspondente à URL limpa.
+
+Options -MultiViews
+RewriteEngine On
+
+# /index.html -> /
+RewriteCond %{THE_REQUEST} \s/+index\.html[\s?] [NC]
+RewriteRule ^ / [R=301,L]
+
+# /termos.html -> /termos  (301, para não perder o que já está indexado)
+RewriteCond %{THE_REQUEST} \s/+([^?\s]+?)\.html[\s?] [NC]
+RewriteRule ^ /%1 [R=301,L]
+
+# /termos -> serve termos.html sem mudar a URL
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
