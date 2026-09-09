@@ -681,6 +681,9 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 480px) {
   body { font-size: 16.5px; }
   .captura { flex-direction: column; }
+  /* em coluna, o flex-basis de 300px viraria altura e o campo esticava
+     numa elipse — aqui ele volta a ter a altura do conteúdo */
+  .captura-campo { flex: 0 0 auto; width: 100%; }
   .captura .btn { width: 100%; }
   .rodape-grade { grid-template-columns: 1fr; }
 }
