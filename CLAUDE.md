@@ -47,9 +47,13 @@ projeto, e não é preciso acessar o servidor.
 - Mensagens de commit em português, no imperativo
   (*"Adiciona"*, *"Corrige"*, *"Remove"*).
 - Textos do site em português do Brasil.
-- Os arquivos `robots.txt` e `sitemap.xml` usam URLs absolutas em
-  `https://minisitee.com` — atualize o `sitemap.xml` ao criar ou remover
-  páginas.
+- Os arquivos `robots.txt` e `sitemap*.xml` usam URLs absolutas em
+  `https://minisitee.com`. O `sitemap.xml` é só um índice: as páginas deste
+  repositório ficam em `sitemap-paginas.xml` — é esse que você atualiza ao
+  criar ou remover páginas — e os minisites em `sitemap-minisites.xml`, que o
+  aplicativo gera a partir do banco. O servidor entrega o arquivo quando ele
+  existe aqui e repassa o resto para o aplicativo, por isso os dois convivem
+  no mesmo domínio.
 
 ## Rodando localmente
 

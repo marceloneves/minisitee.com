@@ -1,27 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
-  <url>
-    <loc>https://minisitee.com/</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>monthly</changefreq>
-    <priority>1.0</priority>
-  </url>
-  <url>
-    <loc>https://minisitee.com/termos/</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://minisitee.com/privacidade/</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-  <url>
-    <loc>https://minisitee.com/cookies/</loc>
-    <lastmod>2026-09-07</lastmod>
-    <changefreq>yearly</changefreq>
-    <priority>0.3</priority>
-  </url>
-</urlset>
+<!--
+  Indice: as paginas fixas deste repositorio ficam em sitemap-paginas.xml e os
+  minisites em sitemap-minisites.xml, que o aplicativo gera a partir do banco.
+  E o endereco que o robots.txt anuncia, entao os dois entram no indice juntos.
+-->
+<sitemapindex xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <sitemap>
+    <loc>https://minisitee.com/sitemap-paginas.xml</loc>
+  </sitemap>
+  <sitemap>
+    <loc>https://minisitee.com/sitemap-minisites.xml</loc>
+  </sitemap>
+</sitemapindex>
