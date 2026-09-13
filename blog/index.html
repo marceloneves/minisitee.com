@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/styles.css?v=20260912">
+<link rel="stylesheet" href="/styles.css?v=20260912b">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://minisitee.com/blog/">
@@ -26,21 +26,31 @@
 
 <a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="cabecalho grudado">
+<header class="cabecalho" id="cabecalho">
   <div class="faixa">
     <a class="marca" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
       <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
         <rect width="32" height="32" rx="9"/>
         <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
-            fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+              fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
       <span class="marca-nome">minisit<span>ee</span></span>
     </a>
 
-    <nav class="menu menu-doc" aria-label="Navegação">
-      <a href="/" target="_blank" rel="noopener">Voltar ao site</a>
-      <a class="btn btn-solido" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="/" target="_blank" rel="noopener">Início</a>
+      <a href="/#oque" target="_blank" rel="noopener">O que é</a>
+      <a href="/#blocos" target="_blank" rel="noopener">Ferramentas</a>
+      <a href="/#como" target="_blank" rel="noopener">Como funciona</a>
+      <a href="/#precos" target="_blank" rel="noopener">Preços</a>
+      <a href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
+      <a class="ativo" href="/blog/" aria-current="page" target="_blank" rel="noopener">Blog</a>
+      <a class="btn btn-solido menu-criar" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
     </nav>
+
+    <button class="hamburguer" id="hamburguer" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
+    </button>
   </div>
 </header>
 
