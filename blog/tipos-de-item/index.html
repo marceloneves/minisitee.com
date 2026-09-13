@@ -12,7 +12,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=20260912">
+<link rel="stylesheet" href="/styles.css?v=20260912">
 
 <meta property="og:type" content="article">
 <meta property="og:url" content="https://minisitee.com/blog/tipos-de-item/">
@@ -44,62 +44,34 @@
 </head>
 <body>
 
-<a class="btn btn-default btn-sm sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60]" href="#conteudo">Pular para o conteúdo</a>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header id="cabecalho" class="sticky top-0 z-50 border-b border-transparent bg-background/70 backdrop-blur-xl transition-colors data-[rolado=true]:border-border data-[rolado=true]:bg-background/85">
-  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5">
-    <a class="flex items-center gap-2.5" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
-      <svg class="size-7" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="9" fill="#111113"/>
-        <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23" fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<header class="cabecalho grudado">
+  <div class="faixa">
+    <a class="marca" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
+      <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9"/>
+        <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
+            fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="text-[15px] font-semibold tracking-tight">minisit<span class="text-muted-foreground">ee</span></span>
+      <span class="marca-nome">minisit<span>ee</span></span>
     </a>
 
-    <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Navegação principal">
-      <a class="nav-link" href="/" target="_blank" rel="noopener">Início</a>
-      <a class="nav-link" href="/#oque" target="_blank" rel="noopener">O que é</a>
-      <a class="nav-link" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
-      <a class="nav-link" href="/#como" target="_blank" rel="noopener">Como funciona</a>
-      <a class="nav-link" href="/#precos" target="_blank" rel="noopener">Preços</a>
-      <a class="nav-link" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
-      <a class="nav-link" href="/blog/" target="_blank" rel="noopener">Blog</a>
+    <nav class="menu menu-doc" aria-label="Navegação">
+      <a href="/" target="_blank" rel="noopener">Voltar ao site</a>
+      <a class="btn btn-solido" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
     </nav>
-
-    <div class="hidden items-center gap-2 lg:flex">
-      <a class="btn btn-default btn-sm" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
-    </div>
-
-    <button class="group btn btn-ghost btn-icon lg:hidden" id="hamburguer" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
-      <svg class="block group-aria-expanded:hidden" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/></svg>
-      <svg class="hidden group-aria-expanded:block" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m4 4 8 8m0-8-8 8"/></svg>
-    </button>
   </div>
-
-  <nav class="hidden border-t border-border bg-background px-5 pt-3 pb-5 lg:hidden" id="menu" aria-label="Menu">
-    <div class="mx-auto flex max-w-6xl flex-col gap-0.5">
-      <a class="nav-link-mobile" href="/" target="_blank" rel="noopener">Início</a>
-      <a class="nav-link-mobile" href="/#oque" target="_blank" rel="noopener">O que é</a>
-      <a class="nav-link-mobile" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
-      <a class="nav-link-mobile" href="/#como" target="_blank" rel="noopener">Como funciona</a>
-      <a class="nav-link-mobile" href="/#precos" target="_blank" rel="noopener">Preços</a>
-      <a class="nav-link-mobile" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
-      <a class="nav-link-mobile" href="/blog/" target="_blank" rel="noopener">Blog</a>
-      <a class="btn btn-default mt-3" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
-    </div>
-  </nav>
 </header>
 
 <main class="doc" id="conteudo">
-  <div aria-hidden="true" class="brilho-hero pointer-events-none absolute inset-x-0 top-0 h-[480px]"></div>
-
-  <article class="limite-estreito relative">
-    <a class="etiqueta transition-colors hover:text-foreground" href="/blog/" target="_blank" rel="noopener">← Blog</a>
+  <article class="limite limite-estreito">
+    <a class="etiqueta" href="/blog/" target="_blank" rel="noopener">← Blog</a>
     <h1>Os 13 tipos de item do minisitee, explicados um por um</h1>
     <p class="doc-resumo">O que cada bloco faz, o que você preenche no painel e o que o seu cliente vê do outro lado — do Produto à Agenda.</p>
     <p class="doc-data"><time datetime="2026-09-12">12 de setembro de 2026</time> · <span id="leitura">9 min de leitura</span></p>
 
-    <section class="doc-secao mt-10">
+    <section class="doc-secao">
       <p>Um minisitee é montado com <strong>itens</strong>. Cada item é um bloco da sua página: um produto com foto e preço, um botão de WhatsApp, o seu horário, um mapa. Você escolhe o tipo em <strong>Novo item</strong>, preenche os campos e ele aparece no seu minisitee, na ordem que você definir com as setas ↑ ↓ do painel.</p>
       <p>Hoje são 13 tipos. Abaixo, eles estão separados pelo trabalho que fazem por você: mostrar o que você vende, levar o cliente até a conversa, responder antes da pergunta e organizar horários e prazos.</p>
     </section>
@@ -329,65 +301,63 @@
     </section>
 
     <!-- ================= CTA ================= -->
-    <div class="relative mt-16 overflow-hidden rounded-xl border border-border bg-card p-8 text-center md:p-10">
-      <div aria-hidden="true" class="brilho-cta pointer-events-none absolute inset-0"></div>
-      <div class="relative">
-        <h2 class="text-2xl font-semibold tracking-tight md:text-3xl">Pronto para montar o seu?</h2>
-        <p class="mx-auto mt-3 max-w-md text-[15px] leading-relaxed text-muted-foreground">Crie seu minisitee grátis e teste qualquer tipo de item. Sem cartão, sem instalar nada.</p>
-        <a class="btn btn-brand btn-lg mt-6" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee grátis</a>
-      </div>
+    <div class="artigo-cta">
+      <h2>Pronto para montar o seu?</h2>
+      <p>Crie seu minisitee grátis e teste qualquer tipo de item. Sem cartão, sem instalar nada.</p>
+      <a class="btn btn-solido" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee grátis</a>
     </div>
   </article>
 </main>
 
-<footer class="border-t border-border">
-  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-3 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
-    <div class="sm:col-span-3 lg:col-span-1">
-      <a class="flex w-fit items-center gap-2.5" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
-        <svg class="size-7" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="9" fill="#111113"/>
-          <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23" fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<footer class="rodape">
+  <div class="limite rodape-grade">
+    <div class="rodape-marca">
+      <a class="marca" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
+        <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9"/>
+          <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
+                fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span class="text-[15px] font-semibold tracking-tight">minisit<span class="text-muted-foreground">ee</span></span>
+        <span class="marca-nome">minisit<span>ee</span></span>
       </a>
-      <p class="mt-4 max-w-xs text-[13.5px] leading-relaxed text-muted-foreground">Seu catálogo em um link, pronto para o Instagram.</p>
-      <p class="mt-4 text-[12.5px] leading-relaxed text-muted-foreground/80">
-        minisitee é operado por <strong class="font-medium text-foreground/80">[RAZÃO SOCIAL LTDA]</strong><br>
+      <p class="rodape-frase">Seu catálogo em um link, pronto para o Instagram.</p>
+      <p class="rodape-empresa">
+        minisitee é operado por <strong>[RAZÃO SOCIAL LTDA]</strong><br>
         CNPJ [00.000.000/0001-00] · [Cidade/UF], Brasil
       </p>
     </div>
 
     <nav aria-label="Produto">
-      <p class="footer-title">Produto</p>
-      <a class="footer-link" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
-      <a class="footer-link" href="/#como" target="_blank" rel="noopener">Como funciona</a>
-      <a class="footer-link" href="/#precos" target="_blank" rel="noopener">Preços</a>
-      <a class="footer-link" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
-      <a class="footer-link" href="/blog/" target="_blank" rel="noopener">Blog</a>
+      <p class="rodape-titulo">Produto</p>
+      <a href="/#blocos" target="_blank" rel="noopener">Recursos</a>
+      <a href="/#como" target="_blank" rel="noopener">Como funciona</a>
+      <a href="/#precos" target="_blank" rel="noopener">Preços</a>
+      <a href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
+      <a href="/blog/" target="_blank" rel="noopener">Blog</a>
     </nav>
 
     <nav aria-label="Conta">
-      <p class="footer-title">Conta</p>
-      <a class="footer-link" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Entrar</a>
-      <a class="footer-link" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar conta</a>
-      <a class="footer-link" href="mailto:suporte@minisitee.com" target="_blank" rel="noopener">Suporte</a>
+      <p class="rodape-titulo">Conta</p>
+      <a href="https://app.minisitee.com/login" target="_blank" rel="noopener">Entrar</a>
+      <a href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar conta</a>
+      <a href="mailto:suporte@minisitee.com" target="_blank" rel="noopener">Suporte</a>
     </nav>
 
     <nav aria-label="Legal">
-      <p class="footer-title">Legal</p>
-      <a class="footer-link" href="/termos/" target="_blank" rel="noopener">Termos de uso</a>
-      <a class="footer-link" href="/privacidade/" target="_blank" rel="noopener">Política de privacidade</a>
-      <a class="footer-link" href="/cookies/" target="_blank" rel="noopener">Política de cookies</a>
-      <a class="footer-link" href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">Encarregado de dados</a>
+      <p class="rodape-titulo">Legal</p>
+      <a href="/termos/" target="_blank" rel="noopener">Termos de uso</a>
+      <a href="/privacidade/" target="_blank" rel="noopener">Política de privacidade</a>
+      <a href="/cookies/" target="_blank" rel="noopener">Política de cookies</a>
+      <a href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">Encarregado de dados</a>
     </nav>
   </div>
 
-  <div class="mx-auto flex max-w-6xl flex-col gap-3 border-t border-border px-5 py-6 text-[13px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+  <div class="limite rodape-fim">
     <p>© <span id="ano">2026</span> minisitee · Todos os direitos reservados</p>
-    <p class="flex gap-5">
-      <a class="transition-colors hover:text-foreground" href="/termos/" target="_blank" rel="noopener">Termos</a>
-      <a class="transition-colors hover:text-foreground" href="/privacidade/" target="_blank" rel="noopener">Privacidade</a>
-      <a class="transition-colors hover:text-foreground" href="/cookies/" target="_blank" rel="noopener">Cookies</a>
+    <p class="rodape-links">
+      <a href="/termos/" target="_blank" rel="noopener">Termos</a>
+      <a href="/privacidade/" target="_blank" rel="noopener">Privacidade</a>
+      <a href="/cookies/" target="_blank" rel="noopener">Cookies</a>
     </p>
   </div>
 </footer>

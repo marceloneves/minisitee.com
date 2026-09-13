@@ -11,7 +11,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/assets/site.css?v=20260912">
+<link rel="stylesheet" href="/styles.css?v=20260912">
 
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://minisitee.com/">
@@ -195,533 +195,508 @@
 </head>
 <body>
 
-<a class="btn btn-default btn-sm sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60]" href="#conteudo">Pular para o conteúdo</a>
+<a class="pular" href="#conteudo">Pular para o conteúdo</a>
 
-<header id="cabecalho" class="sticky top-0 z-50 border-b border-transparent bg-background/70 backdrop-blur-xl transition-colors data-[rolado=true]:border-border data-[rolado=true]:bg-background/85">
-  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5">
-    <a class="flex items-center gap-2.5" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
-      <svg class="size-7" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="9" fill="#111113"/>
-        <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23" fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<header class="cabecalho" id="cabecalho">
+  <div class="faixa">
+    <a class="marca" href="#topo" aria-label="minisitee — início" target="_blank" rel="noopener">
+      <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9"/>
+        <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
+              fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="text-[15px] font-semibold tracking-tight">minisit<span class="text-muted-foreground">ee</span></span>
+      <span class="marca-nome">minisit<span>ee</span></span>
     </a>
 
-    <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Navegação principal">
-      <a class="nav-link" href="/" target="_blank" rel="noopener">Início</a>
-      <a class="nav-link" href="/#oque" target="_blank" rel="noopener">O que é</a>
-      <a class="nav-link" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
-      <a class="nav-link" href="/#como" target="_blank" rel="noopener">Como funciona</a>
-      <a class="nav-link" href="/#precos" target="_blank" rel="noopener">Preços</a>
-      <a class="nav-link" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
-      <a class="nav-link" href="/blog/" target="_blank" rel="noopener">Blog</a>
+    <nav class="menu" id="menu" aria-label="Navegação principal">
+      <a href="#topo" target="_blank" rel="noopener">Início</a>
+      <a href="#oque" target="_blank" rel="noopener">O que é</a>
+      <a href="#blocos" target="_blank" rel="noopener">Recursos</a>
+      <a href="#como" target="_blank" rel="noopener">Como funciona</a>
+      <a href="#precos" target="_blank" rel="noopener">Preços</a>
+      <a href="#duvidas" target="_blank" rel="noopener">Dúvidas</a>
+      <a href="/blog/" target="_blank" rel="noopener">Blog</a>
+      <a class="btn btn-solido menu-criar" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
     </nav>
 
-    <div class="hidden items-center gap-2 lg:flex">
-      <a class="btn btn-default btn-sm" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
-    </div>
-
-    <button class="group btn btn-ghost btn-icon lg:hidden" id="hamburguer" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
-      <svg class="block group-aria-expanded:hidden" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/></svg>
-      <svg class="hidden group-aria-expanded:block" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m4 4 8 8m0-8-8 8"/></svg>
+    <button class="hamburguer" id="hamburguer" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <span></span><span></span><span></span>
     </button>
   </div>
-
-  <nav class="hidden border-t border-border bg-background px-5 pt-3 pb-5 lg:hidden" id="menu" aria-label="Menu">
-    <div class="mx-auto flex max-w-6xl flex-col gap-0.5">
-      <a class="nav-link-mobile" href="/" target="_blank" rel="noopener">Início</a>
-      <a class="nav-link-mobile" href="/#oque" target="_blank" rel="noopener">O que é</a>
-      <a class="nav-link-mobile" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
-      <a class="nav-link-mobile" href="/#como" target="_blank" rel="noopener">Como funciona</a>
-      <a class="nav-link-mobile" href="/#precos" target="_blank" rel="noopener">Preços</a>
-      <a class="nav-link-mobile" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
-      <a class="nav-link-mobile" href="/blog/" target="_blank" rel="noopener">Blog</a>
-      <a class="btn btn-default mt-3" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
-    </div>
-  </nav>
 </header>
 
 <main id="conteudo">
 
   <!-- ================= HERO ================= -->
-  <section class="relative overflow-hidden" id="topo">
-    <div aria-hidden="true" class="brilho-hero pointer-events-none absolute inset-0"></div>
-    <div aria-hidden="true" class="grade-fundo pointer-events-none absolute inset-0"></div>
-
-    <div class="relative mx-auto grid max-w-6xl items-center gap-16 px-5 pt-14 pb-24 md:pt-20 lg:grid-cols-[1.2fr_1fr] lg:pb-32">
-      <div class="text-center lg:text-left">
-        <a class="badge transition-colors hover:text-foreground" href="/blog/tipos-de-item/" target="_blank" rel="noopener">
-          <span class="rounded-full bg-brand/20 px-1.5 py-px text-[11px] text-brand-soft">Novo</span>
-          Agenda e QR code no seu minisitee
-          <span aria-hidden="true">→</span>
-        </a>
-
-        <h1 class="mt-6 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-2 text-[2.6rem] leading-[1.04] font-semibold tracking-[-0.04em] text-transparent sm:text-6xl lg:text-[4.1rem]">
-          Transforme seu Instagram em uma <span class="bg-linear-to-r from-brand-soft to-violet-500 bg-clip-text">máquina de vendas</span>
-        </h1>
-
-        <p class="mx-auto mt-6 max-w-xl text-[17px] leading-relaxed text-muted-foreground lg:mx-0">
+  <section class="hero" id="topo">
+    <div class="limite hero-grade">
+      <div class="hero-texto">
+        <p class="etiqueta">Para quem vende pelo Instagram e pelo WhatsApp</p>
+        <h1>Transforme seu Instagram<br class="quebra"> em uma <span class="destaque">máquina de vendas</span>.</h1>
+        <p class="chamada">
           Chega de mandar preço um por um no direct. Suas fotos, preços,
           WhatsApp, horário e endereço em um link só na bio. Você mesmo cria
           seu minisitee, em 3 minutos e sem programador.
         </p>
 
-        <form class="mx-auto mt-8 flex w-full max-w-md flex-col gap-2 sm:flex-row lg:mx-0" id="formUsuario" novalidate>
-          <label class="flex h-11 min-w-0 items-center sm:flex-1 rounded-lg border border-input bg-background pl-3.5 shadow-[0_1px_2px_rgb(0_0_0/0.04)] text-[15px] transition focus-within:border-ring focus-within:ring-[3px] focus-within:ring-ring/30" for="usuario">
-            <span class="text-muted-foreground select-none">minisitee.com/</span>
-            <input class="h-full min-w-0 flex-1 bg-transparent pr-3 text-foreground outline-none placeholder:text-muted-foreground/50 focus-visible:outline-none" id="usuario" name="usuario" type="text" inputmode="latin"
+        <form class="captura" id="formUsuario" novalidate>
+          <label class="captura-campo" for="usuario">
+            <span class="captura-prefixo">minisitee.com/</span>
+            <input id="usuario" name="usuario" type="text" inputmode="latin"
                    autocomplete="off" autocapitalize="none" spellcheck="false"
                    placeholder="seunome" aria-label="Escolha seu endereço no minisitee">
           </label>
-          <button class="btn btn-brand btn-lg" type="submit">Criar grátis</button>
+          <button class="btn btn-solido" type="submit">Criar grátis</button>
         </form>
-        <p class="mt-3 text-[13px] text-muted-foreground" id="notaUsuario">Grátis para começar. Sem cartão, sem instalar nada.</p>
+        <p class="captura-nota" id="notaUsuario">Grátis para começar. Sem cartão, sem instalar nada.</p>
 
-        <ul class="mt-8 flex flex-wrap justify-center gap-x-6 gap-y-2 text-[13px] text-muted-foreground lg:justify-start">
-          <li class="flex items-center gap-1.5"><svg class="size-4 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Pronto em minutos</li>
-          <li class="flex items-center gap-1.5"><svg class="size-4 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Funciona em qualquer celular</li>
-          <li class="flex items-center gap-1.5"><svg class="size-4 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Português, inglês e espanhol</li>
+        <ul class="selos">
+          <li>Pronto em minutos</li>
+          <li>Funciona em qualquer celular</li>
+          <li>Português, inglês e espanhol</li>
         </ul>
       </div>
 
-      <!-- Celular com um minisitee de exemplo -->
-      <div aria-hidden="true" class="relative mx-auto w-full max-w-[310px]">
-        <div class="absolute -inset-12 rounded-full bg-brand/15 blur-3xl"></div>
-        <div class="relative rounded-[2.75rem] border border-white/10 bg-[#111214] p-2.5 shadow-[0_40px_100px_-30px_rgb(0_0_0/0.35)]">
-          <div class="overflow-hidden rounded-[2.2rem] bg-[#fafafa] text-zinc-900">
-            <div class="border-b border-zinc-200 bg-white px-4 py-2.5">
-              <p class="truncate rounded-full bg-zinc-100 px-3 py-1 text-center text-[11px] text-zinc-500" id="urlPreview">minisitee.com/seunome</p>
+      <div class="hero-visual" aria-hidden="true">
+        <div class="brilho"></div>
+
+        <div class="telefone" id="telefone" data-tema="light">
+          <div class="tela">
+            <div class="tela-topo">
+              <span class="barra-url"><span id="urlPreview">minisitee.com/seunome</span></span>
             </div>
 
-            <div class="h-[34rem] overflow-hidden">
-              <div class="tela-rolar space-y-3 px-4 pt-5 pb-6">
-                <div class="text-center">
-                  <div class="mx-auto grid size-16 place-items-center rounded-full bg-linear-to-br from-pink-300 to-amber-300 text-lg font-semibold text-white">DA</div>
-                  <p class="mt-2 text-[15px] font-semibold">Doceria da Ana</p>
-                  <p class="text-[11.5px] text-zinc-500">Bolos e doces artesanais · Campinas</p>
+            <div class="tela-rolagem">
+              <div class="tela-conteudo">
+                <div class="perfil">
+                  <div class="avatar">DA</div>
+                  <p class="perfil-nome">Doceria da Ana</p>
+                  <p class="perfil-sub">Bolos e doces artesanais · Campinas</p>
                 </div>
 
-                <p class="flex items-center justify-center gap-2 rounded-xl bg-[#25d366] py-2.5 text-[13px] font-semibold text-white">
-                  <svg class="size-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.3A10 10 0 1 0 12 2Z"/></svg>
+                <a class="zap" href="#precos" tabindex="-1" target="_blank" rel="noopener">
+                  <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2a10 10 0 0 0-8.7 15L2 22l5.2-1.3A10 10 0 1 0 12 2Z" fill="none" stroke="currentColor" stroke-width="1.8"/></svg>
                   Chamar no WhatsApp
-                </p>
+                </a>
 
-                <div class="grid grid-cols-2 gap-2.5">
-                  <div class="rounded-xl border border-zinc-200 bg-white p-1.5">
-                    <div class="aspect-square rounded-lg bg-linear-to-br from-amber-200 to-orange-400"></div>
-                    <p class="mt-1.5 px-0.5 text-[10px] text-zinc-500">Bolos</p>
-                    <p class="px-0.5 text-[11.5px] leading-tight font-medium">Bolo de cenoura</p>
-                    <p class="px-0.5 pb-0.5 text-[11.5px] font-semibold">R$ 68,00</p>
+                <div class="itens">
+                  <div class="item">
+                    <div class="foto foto-a"></div>
+                    <p class="item-cat">Bolos</p>
+                    <p class="item-nome">Bolo de cenoura</p>
+                    <p class="item-preco">R$ 68,00</p>
                   </div>
-                  <div class="rounded-xl border border-zinc-200 bg-white p-1.5">
-                    <div class="aspect-square rounded-lg bg-linear-to-br from-amber-800 to-stone-900"></div>
-                    <p class="mt-1.5 px-0.5 text-[10px] text-zinc-500">Doces</p>
-                    <p class="px-0.5 text-[11.5px] leading-tight font-medium">Caixa com 12 brigadeiros</p>
-                    <p class="px-0.5 pb-0.5 text-[11.5px] font-semibold">R$ 42,00</p>
+                  <div class="item">
+                    <div class="foto foto-b"></div>
+                    <p class="item-cat">Doces</p>
+                    <p class="item-nome">Caixa com 12 brigadeiros</p>
+                    <p class="item-preco">R$ 42,00</p>
                   </div>
-                  <div class="rounded-xl border border-zinc-200 bg-white p-1.5">
-                    <div class="aspect-square rounded-lg bg-linear-to-br from-red-400 to-rose-700"></div>
-                    <p class="mt-1.5 px-0.5 text-[10px] text-zinc-500">Bolos</p>
-                    <p class="px-0.5 text-[11.5px] leading-tight font-medium">Red velvet inteiro</p>
-                    <p class="px-0.5 pb-0.5 text-[11.5px] font-semibold">R$ 95,00</p>
+                  <div class="item">
+                    <div class="foto foto-c"></div>
+                    <p class="item-cat">Bolos</p>
+                    <p class="item-nome">Red velvet inteiro</p>
+                    <p class="item-preco">R$ 95,00</p>
                   </div>
-                  <div class="rounded-xl border border-zinc-200 bg-white p-1.5">
-                    <div class="aspect-square rounded-lg bg-linear-to-br from-sky-200 to-violet-300"></div>
-                    <p class="mt-1.5 px-0.5 text-[10px] text-zinc-500">Festas</p>
-                    <p class="px-0.5 text-[11.5px] leading-tight font-medium">Kit festa 30 pessoas</p>
-                    <p class="px-0.5 pb-0.5 text-[11.5px] font-semibold">R$ 320,00</p>
+                  <div class="item">
+                    <div class="foto foto-d"></div>
+                    <p class="item-cat">Festas</p>
+                    <p class="item-nome">Kit festa 30 pessoas</p>
+                    <p class="item-preco">R$ 320,00</p>
+                  </div>
+                  <div class="item">
+                    <div class="foto foto-e"></div>
+                    <p class="item-cat">Doces</p>
+                    <p class="item-nome">Cento de docinhos</p>
+                    <p class="item-preco">R$ 180,00</p>
+                  </div>
+                  <div class="item">
+                    <div class="foto foto-f"></div>
+                    <p class="item-cat">Café</p>
+                    <p class="item-nome">Torta de limão</p>
+                    <p class="item-preco">R$ 12,00 <span>/ fatia</span></p>
                   </div>
                 </div>
 
-                <div class="rounded-xl border border-zinc-200 bg-white p-3">
-                  <p class="text-[10.5px] font-medium tracking-wide text-zinc-500 uppercase">Agende seu horário</p>
-                  <div class="mt-2 grid grid-cols-7 gap-1 text-center text-[10px]">
-                    <span class="rounded py-1 text-zinc-300">9</span><span class="rounded bg-violet-50 py-1">10</span><span class="rounded bg-violet-50 py-1">11</span><span class="rounded bg-violet-600 py-1 font-semibold text-white">12</span><span class="rounded bg-violet-50 py-1">13</span><span class="rounded bg-violet-50 py-1">14</span><span class="rounded py-1 text-zinc-300">15</span>
-                  </div>
-                  <div class="mt-2 flex gap-1.5 text-[10.5px]">
-                    <span class="rounded-md border border-zinc-200 px-2 py-1">09:00</span><span class="rounded-md border border-violet-600 px-2 py-1 font-medium text-violet-700">10:00</span><span class="rounded-md border border-zinc-200 px-2 py-1">14:00</span>
-                  </div>
+                <div class="bloco-linha">
+                  <p class="bloco-titulo">Horário de hoje</p>
+                  <p class="bloco-valor">09:00 — 18:00</p>
                 </div>
 
-                <div class="rounded-xl border border-zinc-200 bg-white p-3">
-                  <p class="text-[10.5px] font-medium tracking-wide text-zinc-500 uppercase">Horário de hoje</p>
-                  <p class="mt-0.5 text-[13px] font-medium">09:00 às 18:00</p>
+                <div class="bloco-linha">
+                  <p class="bloco-titulo">Onde ficamos</p>
+                  <p class="bloco-valor">Rua das Flores, 220</p>
                 </div>
 
-                <div class="overflow-hidden rounded-xl border border-zinc-200 bg-white">
-                  <div class="p-3">
-                    <p class="text-[10.5px] font-medium tracking-wide text-zinc-500 uppercase">Onde ficamos</p>
-                    <p class="mt-0.5 text-[13px] font-medium">Rua das Flores, 220</p>
-                  </div>
-                  <div class="h-20 bg-linear-to-br from-emerald-100 via-sky-100 to-zinc-100"></div>
+                <div class="mapa"><span>Ver rota no mapa</span></div>
+
+                <p class="secao-mock">Galeria</p>
+                <div class="galeria">
+                  <span class="foto-b"></span><span class="foto-d"></span><span class="foto-a"></span>
+                  <span class="foto-f"></span><span class="foto-c"></span><span class="foto-e"></span>
                 </div>
 
-                <div class="rounded-xl border border-zinc-200 bg-white px-3 text-[12px]">
-                  <p class="flex justify-between border-b border-zinc-100 py-2.5">Vocês entregam? <span class="text-zinc-400">+</span></p>
-                  <p class="flex justify-between border-b border-zinc-100 py-2.5">Aceita Pix? <span class="text-zinc-400">+</span></p>
-                  <p class="flex justify-between py-2.5">Faz bolo sem glúten? <span class="text-zinc-400">+</span></p>
+                <p class="secao-mock">Perguntas frequentes</p>
+                <div class="faq-mock">
+                  <p>Vocês entregam? <span>+</span></p>
+                  <p>Aceita Pix? <span>+</span></p>
+                  <p>Faz bolo sem glúten? <span>+</span></p>
                 </div>
 
-                <div class="flex items-center gap-3 rounded-xl border border-zinc-200 bg-white p-3">
-                  <span class="grid size-9 place-items-center rounded-lg bg-rose-50 text-[10px] font-bold text-rose-600">PDF</span>
-                  <span class="text-[12px] leading-tight font-medium">Cardápio completo<br><small class="font-normal text-zinc-500">1,2 MB</small></span>
+                <div class="arquivo-mock">
+                  <span class="arquivo-icone">PDF</span>
+                  <span>Cardápio completo<br><small>1,2 MB</small></span>
                 </div>
 
-                <div class="flex justify-center gap-2.5 pt-1">
-                  <span class="size-7 rounded-full bg-linear-to-br from-fuchsia-500 to-amber-400"></span>
-                  <span class="size-7 rounded-full bg-zinc-900"></span>
-                  <span class="size-7 rounded-full bg-red-500"></span>
-                  <span class="size-7 rounded-full bg-blue-600"></span>
+                <div class="redes">
+                  <span></span><span></span><span></span><span></span>
                 </div>
 
-                <p class="pt-2 text-center text-[10px] text-zinc-400">Feito com minisitee.com</p>
+                <p class="rodape-mock">feito com minisitee</p>
               </div>
             </div>
           </div>
         </div>
+
       </div>
     </div>
   </section>
 
   <!-- ================= O QUE É ================= -->
-  <section class="border-t border-border" id="oque">
-    <div class="mx-auto max-w-6xl px-5 py-24 md:py-32">
-      <header class="mb-12 max-w-2xl md:mb-16">
-        <p class="text-[13px] font-medium text-brand-soft">O que é</p>
-        <h2 class="mt-3 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-3xl font-semibold tracking-[-0.03em] text-transparent md:text-5xl">Afinal, o que é um minisitee?</h2>
-        <p class="mt-4 text-[17px] leading-relaxed text-muted-foreground">
-          Uma página só sua, em <strong class="font-medium text-foreground">minisitee.com/seunome</strong>, com tudo o que o cliente
+  <section class="secao" id="oque">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">O que é</p>
+        <h2>Afinal, o que é um minisitee?</h2>
+        <p class="sub">
+          Uma página só sua, em <strong>minisitee.com/seunome</strong>, com tudo o que o cliente
           precisa saber antes de comprar: produtos com foto e preço, WhatsApp, horário e endereço.
         </p>
       </header>
 
-      <div class="grid gap-4 md:grid-cols-3">
-        <article class="card p-6">
-          <h3 class="text-[15px] font-medium">Não é loja virtual</h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">O pagamento não acontece aqui. O cliente vê o preço e fecha com você no WhatsApp, do jeito que já fecha hoje.</p>
+      <div class="definicao">
+        <article class="definicao-carta">
+          <h3>Não é loja virtual</h3>
+          <p>O pagamento não acontece aqui. O cliente vê o preço e fecha com você no WhatsApp, do jeito que já fecha hoje.</p>
         </article>
-        <article class="card p-6">
-          <h3 class="text-[15px] font-medium">Não é site</h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">Você não configura domínio, não escolhe tema e não contrata hospedagem. O endereço já vem pronto.</p>
+        <article class="definicao-carta">
+          <h3>Não é site</h3>
+          <p>Você não configura domínio, não escolhe tema e não contrata hospedagem. O endereço já vem pronto.</p>
         </article>
-        <article class="card border-brand/40 bg-brand/[0.06] p-6">
-          <h3 class="text-[15px] font-medium">É a sua vitrine</h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">Foto, preço, horário e endereço numa página só. O cliente chega no WhatsApp já sabendo o que quer.</p>
+        <article class="definicao-carta">
+          <h3>É a sua vitrine</h3>
+          <p>Foto, preço, horário e endereço numa página só. O cliente chega no WhatsApp já sabendo o que quer.</p>
         </article>
       </div>
 
-      <div class="mt-4 grid gap-4 md:grid-cols-3">
-        <figure class="card overflow-hidden">
-          <div aria-hidden="true" class="flex h-64 items-center justify-center border-b border-border bg-muted/50">
-            <div class="w-52 rounded-xl border border-white/10 bg-black p-3 text-white shadow-2xl">
-              <div class="flex items-center gap-2.5">
-                <span class="grid size-10 place-items-center rounded-full bg-linear-to-br from-pink-300 to-amber-300 text-[11px] font-semibold">DA</span>
+      <div class="jornada">
+        <figure class="cena">
+          <div class="cena-tela">
+            <div class="mini mini-bio">
+              <div class="bio-perfil">
+                <span class="bio-avatar">DA</span>
                 <div>
-                  <p class="text-[11px] font-semibold">@doceriadaana</p>
-                  <p class="text-[10px] text-white/60">Bolos e doces · Campinas</p>
+                  <p class="bio-user">@doceriadaana</p>
+                  <p class="bio-txt">Bolos e doces · Campinas</p>
                 </div>
               </div>
-              <p class="mt-2 text-[10px] font-medium text-sky-300">minisitee.com/doceriadaana</p>
-              <div class="mt-2.5 grid grid-cols-3 gap-0.5">
-                <span class="aspect-square bg-linear-to-br from-amber-200 to-orange-400"></span><span class="aspect-square bg-linear-to-br from-amber-800 to-stone-900"></span><span class="aspect-square bg-linear-to-br from-red-400 to-rose-700"></span>
-                <span class="aspect-square bg-linear-to-br from-sky-200 to-violet-300"></span><span class="aspect-square bg-linear-to-br from-pink-200 to-fuchsia-400"></span><span class="aspect-square bg-linear-to-br from-lime-200 to-yellow-300"></span>
+              <p class="bio-link">minisitee.com/doceriadaana</p>
+              <div class="bio-grade">
+                <span class="foto-a"></span><span class="foto-b"></span><span class="foto-c"></span>
+                <span class="foto-d"></span><span class="foto-e"></span><span class="foto-f"></span>
               </div>
             </div>
           </div>
-          <figcaption class="p-5">
-            <p class="text-[12.5px] text-muted-foreground"><span class="font-mono text-foreground/50">01</span> · O post</p>
-            <p class="mt-1 text-[14.5px] leading-relaxed">Alguém vê seu produto no Instagram e quer saber o preço</p>
-          </figcaption>
+          <figcaption><strong>O post</strong>Alguém vê seu produto no Instagram e quer saber o preço</figcaption>
         </figure>
 
-        <figure class="card overflow-hidden">
-          <div aria-hidden="true" class="flex h-64 items-center justify-center border-b border-border bg-muted/50">
-            <div class="w-52 overflow-hidden rounded-xl bg-[#fafafa] text-zinc-900 shadow-2xl">
-              <p class="border-b border-zinc-200 bg-white py-1.5 text-center text-[9.5px] text-zinc-500">minisitee.com/doceriadaana</p>
-              <div class="p-2.5">
-                <div class="flex items-center gap-2">
-                  <span class="grid size-7 place-items-center rounded-full bg-linear-to-br from-pink-300 to-amber-300 text-[9px] font-semibold text-white">DA</span>
-                  <p class="text-[11px] font-semibold">Doceria da Ana</p>
-                </div>
-                <p class="mt-2 rounded-lg bg-[#25d366] py-1.5 text-center text-[10px] font-semibold text-white">Chamar no WhatsApp</p>
-                <div class="mt-2 grid grid-cols-2 gap-1.5">
-                  <div class="rounded-lg border border-zinc-200 bg-white p-1"><span class="block aspect-[4/3] rounded bg-linear-to-br from-amber-200 to-orange-400"></span><p class="mt-1 text-[9px]">Bolo de cenoura</p><p class="text-[9.5px] font-semibold">R$ 68,00</p></div>
-                  <div class="rounded-lg border border-zinc-200 bg-white p-1"><span class="block aspect-[4/3] rounded bg-linear-to-br from-amber-800 to-stone-900"></span><p class="mt-1 text-[9px]">12 brigadeiros</p><p class="text-[9.5px] font-semibold">R$ 42,00</p></div>
-                </div>
+        <span class="seta" aria-hidden="true">→</span>
+
+        <figure class="cena">
+          <div class="cena-tela">
+            <div class="mini mini-site">
+              <div class="site-topo">minisitee.com/doceriadaana</div>
+              <div class="site-perfil">
+                <span class="site-avatar">DA</span>
+                <p class="site-nome">Doceria da Ana</p>
+              </div>
+              <p class="site-zap">Chamar no WhatsApp</p>
+              <div class="site-itens">
+                <div><span class="foto-a"></span><p>Bolo de cenoura</p><strong>R$ 68,00</strong></div>
+                <div><span class="foto-b"></span><p>12 brigadeiros</p><strong>R$ 42,00</strong></div>
               </div>
             </div>
           </div>
-          <figcaption class="p-5">
-            <p class="text-[12.5px] text-muted-foreground"><span class="font-mono text-foreground/50">02</span> · O catálogo</p>
-            <p class="mt-1 text-[14.5px] leading-relaxed">Toca no link da bio e vê produto, preço, horário e endereço</p>
-          </figcaption>
+          <figcaption><strong>O catálogo</strong>Toca no link da bio e vê produto, preço, horário e endereço</figcaption>
         </figure>
 
-        <figure class="card overflow-hidden">
-          <div aria-hidden="true" class="flex h-64 items-center justify-center border-b border-border bg-muted/50">
-            <div class="w-52 overflow-hidden rounded-xl bg-[#0b141a] text-white shadow-2xl">
-              <div class="flex items-center gap-2 bg-[#202c33] px-2.5 py-2">
-                <span class="grid size-7 place-items-center rounded-full bg-emerald-600 text-[10px] font-semibold">M</span>
+        <span class="seta" aria-hidden="true">→</span>
+
+        <figure class="cena">
+          <div class="cena-tela">
+            <div class="mini mini-zap">
+              <div class="zap-topo">
+                <span class="zap-avatar">M</span>
                 <div>
-                  <p class="text-[11px] font-semibold">Marina Costa</p>
-                  <p class="text-[9px] text-white/60">online</p>
+                  <p class="zap-nome">Marina Costa</p>
+                  <p class="zap-status">online</p>
                 </div>
               </div>
-              <div class="flex flex-col gap-1.5 p-2.5 text-[10.5px] leading-snug">
-                <p class="max-w-[85%] self-start rounded-lg rounded-tl-none bg-[#202c33] px-2 py-1.5">Oi! Quero o bolo de cenoura de R$ 68 para sábado 🙂</p>
-                <p class="max-w-[85%] self-end rounded-lg rounded-tr-none bg-[#005c4b] px-2 py-1.5">Fechado! Retira às 10h?</p>
-                <p class="max-w-[85%] self-start rounded-lg rounded-tl-none bg-[#202c33] px-2 py-1.5">Perfeito</p>
-              </div>
+              <p class="balao balao-in">Oi! Quero o bolo de cenoura de R$ 68 para sábado 🙂</p>
+              <p class="balao balao-out">Fechado! Retira às 10h?</p>
+              <p class="balao balao-in">Perfeito</p>
             </div>
           </div>
-          <figcaption class="p-5">
-            <p class="text-[12.5px] text-muted-foreground"><span class="font-mono text-foreground/50">03</span> · A venda</p>
-            <p class="mt-1 text-[14.5px] leading-relaxed">Chega no seu WhatsApp já sabendo o que quer e quanto custa</p>
-          </figcaption>
+          <figcaption><strong>A venda</strong>Chega no seu WhatsApp já sabendo o que quer e quanto custa</figcaption>
         </figure>
       </div>
     </div>
   </section>
 
-  <!-- ================= O PROBLEMA ================= -->
-  <section class="border-t border-border">
-    <div class="mx-auto max-w-6xl px-5 py-24 md:py-32">
-      <header class="mb-12 max-w-2xl md:mb-16">
-        <p class="text-[13px] font-medium text-brand-soft">O problema</p>
-        <h2 class="mt-3 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-3xl font-semibold tracking-[-0.03em] text-transparent md:text-5xl">No direct, a venda esfria</h2>
-        <p class="mt-4 text-[17px] leading-relaxed text-muted-foreground">O cliente pergunta o preço às 22h, você responde no dia seguinte — e aí ele já comprou de outro.</p>
+  <!-- ================= DOR ================= -->
+  <section class="secao secao-clara problema">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">O problema</p>
+        <h2>No direct, a venda esfria</h2>
+        <p class="sub">O cliente pergunta o preço às 22h, você responde no dia seguinte — e aí ele já comprou de outro.</p>
       </header>
 
-      <div class="grid gap-4 md:grid-cols-2">
-        <article class="card p-7">
-          <p class="text-[22px] font-semibold tracking-tight text-muted-foreground">Sem o minisitee</p>
-          <ul class="mt-6 space-y-3.5 text-base text-muted-foreground">
-            <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-destructive/80" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m4.5 4.5 7 7m0-7-7 7"/></svg>“Quanto custa?” dez vezes por dia, no direct</li>
-            <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-destructive/80" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m4.5 4.5 7 7m0-7-7 7"/></svg>Tabela de preços em print, sempre desatualizada</li>
-            <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-destructive/80" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m4.5 4.5 7 7m0-7-7 7"/></svg>Um link na bio que só leva a um lugar</li>
-            <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-destructive/80" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" aria-hidden="true"><path d="m4.5 4.5 7 7m0-7-7 7"/></svg>Cliente perguntando o endereço e o horário de novo</li>
+      <div class="par">
+        <article class="carta carta-antes">
+          <p class="carta-tag">Sem o minisitee</p>
+          <ul class="lista-x">
+            <li>“Quanto custa?” dez vezes por dia, no direct</li>
+            <li>Tabela de preços em print, sempre desatualizada</li>
+            <li>Um link na bio que só leva a um lugar</li>
+            <li>Cliente perguntando o endereço e o horário de novo</li>
           </ul>
         </article>
-
-        <div class="borda-brand rounded-xl p-px">
-          <article class="h-full rounded-[11px] bg-card p-7">
-            <p class="text-[22px] font-semibold tracking-tight text-foreground">Com o minisitee</p>
-            <ul class="mt-6 space-y-3.5 text-base text-foreground/85">
-              <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Preço e foto de cada produto no seu minisitee, sempre no ar</li>
-              <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Você edita pelo celular e muda na hora</li>
-              <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Um link que abre tudo: catálogo, contato e horário</li>
-              <li class="flex gap-3"><svg class="mt-1 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>O cliente chega no WhatsApp já sabendo o que quer</li>
-            </ul>
-          </article>
-        </div>
+        <article class="carta carta-depois">
+          <p class="carta-tag">Com o minisitee</p>
+          <ul class="lista-v">
+            <li>Preço e foto de cada produto no seu minisitee, sempre no ar</li>
+            <li>Você edita pelo celular e muda na hora</li>
+            <li>Um link que abre tudo: catálogo, contato e horário</li>
+            <li>O cliente chega no WhatsApp já sabendo o que quer</li>
+          </ul>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- ================= BLOCOS ================= -->
-  <section class="border-t border-border" id="blocos">
-    <div class="mx-auto max-w-6xl px-5 py-24 md:py-32">
-      <header class="mb-12 flex max-w-none flex-col gap-6 md:mb-16 md:flex-row md:items-end md:justify-between">
-        <div class="max-w-2xl">
-          <p class="text-[13px] font-medium text-brand-soft">Blocos</p>
-          <h2 class="mt-3 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-3xl font-semibold tracking-[-0.03em] text-transparent md:text-5xl">Monte seu minisitee com o que você precisa</h2>
-          <p class="mt-4 text-[17px] leading-relaxed text-muted-foreground">Cada bloco entra, sai e muda de lugar com um toque. Sem código, sem tema para instalar.</p>
-        </div>
-        <a class="btn btn-outline shrink-0 self-start md:self-auto" href="/blog/tipos-de-item/" target="_blank" rel="noopener">Cada tipo explicado <span aria-hidden="true">→</span></a>
+  <section class="secao" id="blocos">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Blocos</p>
+        <h2>Monte seu minisitee com o que você precisa</h2>
+        <p class="sub">Cada bloco entra, sai e muda de lugar com um toque. Sem código, sem tema para instalar.</p>
       </header>
 
-      <ul class="grid gap-px overflow-hidden rounded-xl border border-border bg-border sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg></span>
-          <h3 class="text-[15px] font-medium">Agenda</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">O cliente escolhe dia e horário e pede o agendamento. Você confirma pelo painel.</p>
+      <ul class="grade-blocos">
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/><path d="m9 15 2 2 4-4"/></svg>
+          </span>
+          <h3>Agenda</h3>
+          <p>O cliente escolhe dia e horário e pede o agendamento. Você confirma pelo painel.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg></span>
-          <h3 class="text-[15px] font-medium">Botão de ligar</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Disca o seu número direto do celular do visitante.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M5 4h4l2 5-2.5 1.5a12 12 0 0 0 5 5L15 13l5 2v4a1 1 0 0 1-1.1 1A16 16 0 0 1 4 5.1 1 1 0 0 1 5 4Z"/></svg>
+          </span>
+          <h3>Botão de ligar</h3>
+          <p>Disca o seu número direto do celular do visitante.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg></span>
-          <h3 class="text-[15px] font-medium">Botão WhatsApp</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Abre a conversa com uma mensagem já escrita para o cliente.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M12 3a9 9 0 0 0-7.8 13.5L3 21l4.6-1.2A9 9 0 1 0 12 3Z"/></svg>
+          </span>
+          <h3>Botão WhatsApp</h3>
+          <p>Abre a conversa com uma mensagem já escrita para o cliente.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 1.5M9 2h6"/></svg></span>
-          <h3 class="text-[15px] font-medium">Contagem regressiva</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">O tempo que falta para a promoção, o lote ou a estreia.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="5" width="18" height="16" rx="2"/><path d="M8 3v4M16 3v4M3 10h18"/></svg>
+          </span>
+          <h3>Contagem regressiva</h3>
+          <p>O tempo que falta para a promoção, o lote ou a estreia.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><path d="M12 3v11"/><path d="m8 11 4 4 4-4"/><path d="M5 19h14"/></svg></span>
-          <h3 class="text-[15px] font-medium">Download de arquivo</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Cardápio, tabela de preços, PDF — o visitante baixa na hora.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M12 3v11"/><path d="m8 11 4 4 4-4"/><path d="M5 19h14"/></svg>
+          </span>
+          <h3>Download de arquivo</h3>
+          <p>Cardápio, tabela de preços, PDF — o visitante baixa na hora.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg></span>
-          <h3 class="text-[15px] font-medium">Endereço com mapa</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Onde você fica, com mapa e rota em um toque.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M12 21s7-5.6 7-11a7 7 0 1 0-14 0c0 5.4 7 11 7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+          </span>
+          <h3>Endereço com mapa</h3>
+          <p>Onde você fica, com mapa e rota em um toque.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg></span>
-          <h3 class="text-[15px] font-medium">Galeria de fotos</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Várias fotos em grade, para mostrar trabalho feito.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1.5"/><rect x="14" y="3" width="7" height="7" rx="1.5"/><rect x="3" y="14" width="7" height="7" rx="1.5"/><rect x="14" y="14" width="7" height="7" rx="1.5"/></svg>
+          </span>
+          <h3>Galeria de fotos</h3>
+          <p>Várias fotos em grade, para mostrar trabalho feito.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg></span>
-          <h3 class="text-[15px] font-medium">Horário</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Os dias e as horas em que você atende, dia a dia.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>
+          </span>
+          <h3>Horário</h3>
+          <p>Os dias e as horas em que você atende, dia a dia.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg></span>
-          <h3 class="text-[15px] font-medium">Link</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Um botão para qualquer endereço: loja, formulário, portfólio.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><path d="M10 13a5 5 0 0 0 7 0l3-3a5 5 0 0 0-7-7l-1 1"/><path d="M14 11a5 5 0 0 0-7 0l-3 3a5 5 0 0 0 7 7l1-1"/></svg>
+          </span>
+          <h3>Link</h3>
+          <p>Um botão para qualquer endereço: loja, formulário, portfólio.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.5.2-.7.6-.7 1.1v.5"/><path d="M12 17h.01"/></svg></span>
-          <h3 class="text-[15px] font-medium">Perguntas frequentes</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Respostas que abrem ao tocar — e param de chegar no direct.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.2 2.4c-.5.2-.7.6-.7 1.1v.5"/><path d="M12 17h.01"/></svg>
+          </span>
+          <h3>Perguntas frequentes</h3>
+          <p>Respostas que abrem ao tocar — e param de chegar no direct.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m3 14 4-4 4 4 3-3 7 6"/></svg></span>
-          <h3 class="text-[15px] font-medium">Produto</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Foto, preço, categoria e um endereço próprio para compartilhar.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="4" width="18" height="14" rx="2"/><path d="m3 14 4-4 4 4 3-3 7 6"/></svg>
+          </span>
+          <h3>Produto</h3>
+          <p>Foto, preço, categoria e um endereço próprio para compartilhar.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v.01M14 21h.01M17.5 21H21v-3.5"/></svg></span>
-          <h3 class="text-[15px] font-medium">QR code</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Qualquer link vira QR code para imprimir no balcão, na embalagem ou no cartão.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><path d="M14 14h3v3M21 14v.01M14 21h.01M17.5 21H21v-3.5"/></svg>
+          </span>
+          <h3>QR code</h3>
+          <p>Qualquer link vira QR code para imprimir no balcão, na embalagem ou no cartão.</p>
         </li>
-        <li class="bg-background p-6 transition-colors hover:bg-muted/50">
-          <span class="icone"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg></span>
-          <h3 class="text-[15px] font-medium">Redes sociais</h3>
-          <p class="mt-1.5 text-[13.5px] leading-relaxed text-muted-foreground">Instagram, TikTok, YouTube e mais em uma linha de ícones.</p>
+        <li class="bloco">
+          <span class="icone">
+            <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3a15 15 0 0 1 0 18a15 15 0 0 1 0-18"/></svg>
+          </span>
+          <h3>Redes sociais</h3>
+          <p>Instagram, TikTok, YouTube e mais em uma linha de ícones.</p>
         </li>
-        <li class="flex flex-col justify-between gap-6 bg-muted/40 p-6 md:col-span-2 lg:col-span-3">
-          <div>
-            <h3 class="text-[15px] font-medium">E o resto?</h3>
-            <p class="mt-1.5 max-w-lg text-[13.5px] leading-relaxed text-muted-foreground">Foto de capa, bio, cidade, categorias e status de cada item — reservado, encerrado, rascunho.</p>
-          </div>
-          <div class="flex flex-wrap gap-2">
-            <a class="btn btn-default btn-sm" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Ver na prática <span aria-hidden="true">→</span></a>
-            <a class="btn btn-ghost btn-sm" href="/blog/tipos-de-item/" target="_blank" rel="noopener">Ler o guia dos 13 tipos</a>
-          </div>
+        <li class="bloco bloco-cta">
+          <h3>E o resto?</h3>
+          <p>Foto de capa, bio, cidade, categorias e status de cada item — reservado, encerrado, rascunho.</p>
+          <a class="link-seta" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Ver na prática <span aria-hidden="true">→</span></a>
         </li>
       </ul>
     </div>
   </section>
 
   <!-- ================= COMO FUNCIONA ================= -->
-  <section class="border-t border-border" id="como">
-    <div class="mx-auto max-w-6xl px-5 py-24 md:py-32">
-      <header class="mb-12 max-w-2xl md:mb-16">
-        <p class="text-[13px] font-medium text-brand-soft">Como funciona</p>
-        <h2 class="mt-3 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-3xl font-semibold tracking-[-0.03em] text-transparent md:text-5xl">Três passos, três minutos</h2>
-        <p class="mt-4 text-[17px] leading-relaxed text-muted-foreground">Não tem editor complicado, domínio para configurar nem tema para escolher em uma loja.</p>
+  <section class="secao secao-clara" id="como">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Como funciona</p>
+        <h2>Três passos, três minutos</h2>
+        <p class="sub">Não tem editor complicado, domínio para configurar nem tema para escolher em uma loja.</p>
       </header>
 
-      <ol class="grid gap-4 md:grid-cols-3">
-        <li class="card relative overflow-hidden p-7">
-          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-soft/60 to-transparent"></div>
-          <span class="font-mono text-[13px] text-muted-foreground">01</span>
-          <h3 class="mt-6 text-lg font-medium tracking-tight">Escolha seu endereço</h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">minisitee.com/<strong class="font-medium text-foreground">seunome</strong>. Se estiver livre, é seu — e já vale para colocar na bio.</p>
+      <ol class="passos">
+        <li class="passo">
+          <span class="numero">1</span>
+          <h3>Escolha seu endereço</h3>
+          <p>minisitee.com/<strong>seunome</strong>. Se estiver livre, é seu — e já vale para colocar na bio.</p>
         </li>
-        <li class="card relative overflow-hidden p-7">
-          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-soft/60 to-transparent"></div>
-          <span class="font-mono text-[13px] text-muted-foreground">02</span>
-          <h3 class="mt-6 text-lg font-medium tracking-tight">Adicione os blocos</h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">Produtos com foto e preço, WhatsApp, horário, endereço. Tudo pelo celular, sem app para instalar.</p>
+        <li class="passo">
+          <span class="numero">2</span>
+          <h3>Adicione os blocos</h3>
+          <p>Produtos com foto e preço, WhatsApp, horário, endereço. Tudo pelo celular, sem app para instalar.</p>
         </li>
-        <li class="card relative overflow-hidden p-7">
-          <div aria-hidden="true" class="absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-brand-soft/60 to-transparent"></div>
-          <span class="font-mono text-[13px] text-muted-foreground">03</span>
-          <h3 class="mt-6 text-lg font-medium tracking-tight">Cole o link na bio</h3>
-          <p class="mt-2 text-[14.5px] leading-relaxed text-muted-foreground">Instagram, TikTok, WhatsApp Business, cartão de visita. O cliente abre e já vê tudo.</p>
+        <li class="passo">
+          <span class="numero">3</span>
+          <h3>Cole o link na bio</h3>
+          <p>Instagram, TikTok, WhatsApp Business, cartão de visita. O cliente abre e já vê tudo.</p>
         </li>
       </ol>
     </div>
   </section>
 
   <!-- ================= PARA QUEM ================= -->
-  <section class="border-t border-border">
-    <div class="mx-auto max-w-6xl px-5 py-24 md:py-32">
-      <header class="mb-10 max-w-2xl">
-        <p class="text-[13px] font-medium text-brand-soft">Para quem é</p>
-        <h2 class="mt-3 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-3xl font-semibold tracking-[-0.03em] text-transparent md:text-5xl">Se o seu negócio cabe numa conversa, cabe num minisitee</h2>
+  <section class="secao">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Para quem é</p>
+        <h2>Se o seu negócio cabe numa conversa, cabe num minisitee</h2>
       </header>
-      <ul class="flex flex-wrap gap-2.5">
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Confeitaria e comida caseira</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Loja de roupas no Instagram</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Salão, barbearia e estética</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Artesanato e brechó</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Personal e nutricionista</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Marmitas e delivery</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Fotógrafo e freelancer</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Assistência técnica</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Aluguel de espaço</li>
-        <li class="badge px-3.5 py-1.5 text-[13.5px] text-foreground/80">Autônomo de qualquer área</li>
+      <ul class="publico">
+        <li>Confeitaria e comida caseira</li>
+        <li>Loja de roupas no Instagram</li>
+        <li>Salão, barbearia e estética</li>
+        <li>Artesanato e brechó</li>
+        <li>Personal e nutricionista</li>
+        <li>Marmitas e delivery</li>
+        <li>Fotógrafo e freelancer</li>
+        <li>Assistência técnica</li>
+        <li>Aluguel de espaço</li>
+        <li>Autônomo de qualquer área</li>
       </ul>
     </div>
   </section>
 
   <!-- ================= PREÇOS ================= -->
-  <section class="border-t border-border" id="precos">
-    <div class="mx-auto max-w-6xl px-5 py-24 md:py-32">
-      <header class="mx-auto mb-12 max-w-2xl text-center md:mb-16">
-        <p class="text-[13px] font-medium text-brand-soft">Preços</p>
-        <h2 class="mt-3 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-3xl font-semibold tracking-[-0.03em] text-transparent md:text-5xl">Comece de graça. Assine quando o catálogo crescer.</h2>
-        <p class="mt-4 text-[17px] leading-relaxed text-muted-foreground">Sem contrato e sem fidelidade — o cancelamento é um botão dentro do painel.</p>
+  <section class="secao secao-clara" id="precos">
+    <div class="limite">
+      <header class="titulo-secao">
+        <p class="etiqueta">Preços</p>
+        <h2>Comece de graça. Assine quando o catálogo crescer.</h2>
+        <p class="sub">Sem contrato e sem fidelidade — o cancelamento é um botão dentro do painel.</p>
       </header>
 
-      <div class="mx-auto grid max-w-4xl gap-4 md:grid-cols-2">
-        <article class="card flex flex-col p-8">
-          <h3 class="text-[15px] font-medium">Free</h3>
-          <p class="mt-4 flex items-baseline gap-2"><strong class="text-5xl font-semibold tracking-tight">R$ 0</strong><span class="text-sm text-muted-foreground">para sempre</span></p>
-          <p class="mt-3 text-[14.5px] text-muted-foreground">Para colocar o link na bio hoje mesmo.</p>
-          <div class="my-7 h-px bg-border"></div>
-          <ul class="flex-1 space-y-3 text-[14.5px] text-foreground/85">
-            <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-muted-foreground" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Seu endereço minisitee.com/seunome</li>
-            <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-muted-foreground" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Até 5 itens no catálogo</li>
-            <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-muted-foreground" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Todos os tipos de bloco</li>
-            <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-muted-foreground" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Os 6 estilos de minisitee</li>
-            <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-muted-foreground" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Marca do minisitee no rodapé</li>
+      <div class="planos">
+        <article class="plano">
+          <h3>Free</h3>
+          <p class="preco"><strong>R$ 0</strong><span>para sempre</span></p>
+          <p class="plano-sub">Para colocar o link na bio hoje mesmo.</p>
+          <ul class="lista-v">
+            <li>Seu endereço minisitee.com/seunome</li>
+            <li>Até 5 itens no catálogo</li>
+            <li>Todos os tipos de bloco</li>
+            <li>Os 6 estilos de minisitee</li>
+            <li>Marca do minisitee no rodapé</li>
           </ul>
-          <a class="btn btn-outline mt-8 h-10 w-full" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar conta grátis</a>
+          <a class="btn btn-contorno" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar conta grátis</a>
         </article>
 
-        <div class="borda-brand rounded-xl p-px">
-          <article class="relative flex h-full flex-col overflow-hidden rounded-[11px] bg-card p-8">
-            <div aria-hidden="true" class="pointer-events-none absolute -top-24 right-0 size-64 rounded-full bg-brand/10 blur-3xl"></div>
-            <div class="relative flex items-center justify-between">
-              <h3 class="text-[15px] font-medium">Pro</h3>
-              <span class="badge border-brand/40 bg-brand/10 text-brand-soft">Mais escolhido</span>
-            </div>
-            <p class="relative mt-4 flex items-baseline gap-2"><strong class="text-5xl font-semibold tracking-tight">R$ 297</strong><span class="text-sm text-muted-foreground">por ano</span></p>
-            <p class="relative mt-3 text-[14.5px] text-muted-foreground">Sai por R$ 24,75 por mês — para quem já vive de vender por ali.</p>
-            <div class="relative my-7 h-px bg-border"></div>
-            <ul class="relative flex-1 space-y-3 text-[14.5px] text-foreground/85">
-              <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Tudo do Free</li>
-              <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg><span><strong class="font-medium text-foreground">Itens ilimitados</strong> no catálogo</span></li>
-              <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg><span><strong class="font-medium text-foreground">Sem a marca</strong> do minisitee no rodapé</span></li>
-              <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Um minisitee só seu, do topo ao rodapé</li>
-              <li class="flex gap-3"><svg class="mt-0.5 size-4 shrink-0 text-brand-soft" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="m3.5 8.5 3 3 6-7"/></svg>Um pagamento por ano, cancele quando quiser</li>
-            </ul>
-            <a class="btn btn-brand relative mt-8 h-10 w-full" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Assinar o Pro</a>
-          </article>
-        </div>
+        <article class="plano plano-destaque">
+          <p class="fita">Mais escolhido</p>
+          <h3>Pro</h3>
+          <p class="preco"><strong>R$ 297</strong><span>por ano</span></p>
+          <p class="plano-sub">Sai por R$ 24,75 por mês — para quem já vive de vender por ali.</p>
+          <ul class="lista-v">
+            <li>Tudo do Free</li>
+            <li><strong>Itens ilimitados</strong> no catálogo</li>
+            <li><strong>Sem a marca</strong> do minisitee no rodapé</li>
+            <li>Um minisitee só seu, do topo ao rodapé</li>
+            <li>Um pagamento por ano, cancele quando quiser</li>
+          </ul>
+          <a class="btn btn-solido" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Assinar o Pro</a>
+        </article>
       </div>
     </div>
   </section>
 
   <!-- ================= DÚVIDAS ================= -->
-  <section class="border-t border-border" id="duvidas">
-    <div class="mx-auto max-w-3xl px-5 py-24 md:py-32">
-      <header class="mb-10 text-center">
-        <p class="text-[13px] font-medium text-brand-soft">Dúvidas</p>
-        <h2 class="mt-3 bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-3xl font-semibold tracking-[-0.03em] text-transparent md:text-5xl">O que costumam perguntar</h2>
+  <section class="secao" id="duvidas">
+    <div class="limite limite-estreito">
+      <header class="titulo-secao">
+        <p class="etiqueta">Dúvidas</p>
+        <h2>O que costumam perguntar</h2>
       </header>
 
-      <div class="accordion border-t border-border">
+      <div class="faq">
         <details name="faq">
           <summary>Preciso saber mexer com site?</summary>
           <div class="resposta"><p>Não. Você escolhe um bloco, preenche os campos e ele aparece no seu minisitee. É o mesmo esforço de postar um story.</p></div>
@@ -755,66 +730,65 @@
   </section>
 
   <!-- ================= CTA FINAL ================= -->
-  <section class="relative overflow-hidden border-t border-border">
-    <div aria-hidden="true" class="brilho-cta pointer-events-none absolute inset-0"></div>
-    <div class="relative mx-auto max-w-3xl px-5 py-24 text-center md:py-36">
-      <h2 class="bg-linear-to-b from-foreground to-foreground/60 bg-clip-text pb-1 text-4xl font-semibold tracking-[-0.035em] text-transparent md:text-6xl">Seu minisitee pode estar no ar em 3 minutos</h2>
-      <p class="mx-auto mt-5 max-w-xl text-[17px] leading-relaxed text-muted-foreground">Crie o seu agora, coloque o link na bio e mande para um cliente hoje mesmo. Se não gostar, você perdeu 3 minutos.</p>
-      <a class="btn btn-default btn-lg mt-9" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee grátis</a>
-      <p class="mt-4 text-[13px] text-muted-foreground">Grátis para começar · Sem cartão de crédito</p>
+  <section class="cta-final">
+    <div class="limite">
+      <h2>Seu minisitee pode estar no ar em 3 minutos</h2>
+      <p>Crie o seu agora, coloque o link na bio e mande para um cliente hoje mesmo. Se não gostar, você perdeu 3 minutos.</p>
+      <a class="btn btn-solido btn-grande" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee grátis</a>
+      <p class="cta-nota">Grátis para começar · Sem cartão de crédito</p>
     </div>
   </section>
 
 </main>
 
-<footer class="border-t border-border">
-  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-3 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
-    <div class="sm:col-span-3 lg:col-span-1">
-      <a class="flex w-fit items-center gap-2.5" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
-        <svg class="size-7" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="9" fill="#111113"/>
-          <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23" fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<footer class="rodape">
+  <div class="limite rodape-grade">
+    <div class="rodape-marca">
+      <a class="marca" href="#topo" aria-label="minisitee — início" target="_blank" rel="noopener">
+        <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9"/>
+          <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
+                fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span class="text-[15px] font-semibold tracking-tight">minisit<span class="text-muted-foreground">ee</span></span>
+        <span class="marca-nome">minisit<span>ee</span></span>
       </a>
-      <p class="mt-4 max-w-xs text-[13.5px] leading-relaxed text-muted-foreground">Seu catálogo em um link, pronto para o Instagram.</p>
-      <p class="mt-4 text-[12.5px] leading-relaxed text-muted-foreground/80">
-        minisitee é operado por <strong class="font-medium text-foreground/80">[RAZÃO SOCIAL LTDA]</strong><br>
+      <p class="rodape-frase">Seu catálogo em um link, pronto para o Instagram.</p>
+      <p class="rodape-empresa">
+        minisitee é operado por <strong>[RAZÃO SOCIAL LTDA]</strong><br>
         CNPJ [00.000.000/0001-00] · [Cidade/UF], Brasil
       </p>
     </div>
 
     <nav aria-label="Produto">
-      <p class="footer-title">Produto</p>
-      <a class="footer-link" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
-      <a class="footer-link" href="/#como" target="_blank" rel="noopener">Como funciona</a>
-      <a class="footer-link" href="/#precos" target="_blank" rel="noopener">Preços</a>
-      <a class="footer-link" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
-      <a class="footer-link" href="/blog/" target="_blank" rel="noopener">Blog</a>
+      <p class="rodape-titulo">Produto</p>
+      <a href="#blocos" target="_blank" rel="noopener">Recursos</a>
+      <a href="#como" target="_blank" rel="noopener">Como funciona</a>
+      <a href="#precos" target="_blank" rel="noopener">Preços</a>
+      <a href="#duvidas" target="_blank" rel="noopener">Dúvidas</a>
     </nav>
 
     <nav aria-label="Conta">
-      <p class="footer-title">Conta</p>
-      <a class="footer-link" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Entrar</a>
-      <a class="footer-link" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar conta</a>
-      <a class="footer-link" href="mailto:suporte@minisitee.com" target="_blank" rel="noopener">Suporte</a>
+      <p class="rodape-titulo">Conta</p>
+      <a href="https://app.minisitee.com/login" target="_blank" rel="noopener">Entrar</a>
+      <a href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar conta</a>
+      <a href="mailto:suporte@minisitee.com" target="_blank" rel="noopener">Suporte</a>
     </nav>
 
     <nav aria-label="Legal">
-      <p class="footer-title">Legal</p>
-      <a class="footer-link" href="/termos/" target="_blank" rel="noopener">Termos de uso</a>
-      <a class="footer-link" href="/privacidade/" target="_blank" rel="noopener">Política de privacidade</a>
-      <a class="footer-link" href="/cookies/" target="_blank" rel="noopener">Política de cookies</a>
-      <a class="footer-link" href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">Encarregado de dados</a>
+      <p class="rodape-titulo">Legal</p>
+      <a href="/termos/" target="_blank" rel="noopener">Termos de uso</a>
+      <a href="/privacidade/" target="_blank" rel="noopener">Política de privacidade</a>
+      <a href="/cookies/" target="_blank" rel="noopener">Política de cookies</a>
+      <a href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">Encarregado de dados</a>
     </nav>
   </div>
 
-  <div class="mx-auto flex max-w-6xl flex-col gap-3 border-t border-border px-5 py-6 text-[13px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
+  <div class="limite rodape-fim">
     <p>© <span id="ano">2026</span> minisitee · Todos os direitos reservados</p>
-    <p class="flex gap-5">
-      <a class="transition-colors hover:text-foreground" href="/termos/" target="_blank" rel="noopener">Termos</a>
-      <a class="transition-colors hover:text-foreground" href="/privacidade/" target="_blank" rel="noopener">Privacidade</a>
-      <a class="transition-colors hover:text-foreground" href="/cookies/" target="_blank" rel="noopener">Cookies</a>
+    <p class="rodape-links">
+      <a href="/termos/" target="_blank" rel="noopener">Termos</a>
+      <a href="/privacidade/" target="_blank" rel="noopener">Privacidade</a>
+      <a href="/cookies/" target="_blank" rel="noopener">Cookies</a>
     </p>
   </div>
 </footer>
