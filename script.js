@@ -104,7 +104,7 @@
         return;
       }
 
-      window.location.href = APP + '?u=' + encodeURIComponent(apelido);
+      window.open(APP + '?u=' + encodeURIComponent(apelido), '_blank', 'noopener');
     });
   }
 
