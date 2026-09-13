@@ -297,8 +297,9 @@ a { color: inherit; text-decoration: none; }
   display: flex; align-items: center; justify-content: center; gap: 8px;
   margin-top: 16px; padding: 12px;
   border-radius: 14px;
-  background: var(--p-brand); color: var(--p-brand-fg);
-  font-size: 14px; font-weight: 500;
+  /* Verde do WhatsApp em todos os temas: o botão tem que parecer o do app */
+  background: #25d366; color: #ffffff;
+  font-size: 14px; font-weight: 600;
 }
 .zap svg { width: 17px; height: 17px; }
 
