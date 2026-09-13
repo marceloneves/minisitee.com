@@ -124,66 +124,29 @@
     });
   }
 
-  /* ---------- Aviso de cookies: o Google Analytics só grava com o aceite ---------- */
-  // O consentimento começa negado no <head> de cada página; aqui a escolha é
-  // pedida, guardada e repassada ao gtag.
+  /* ---------- Aviso de cookies: só informa, não pede permissão ---------- */
+  // O Google Analytics mede desde o carregamento (tag no <head>); o aviso
+  // aparece até o visitante clicar em "Entendi".
   var CHAVE_COOKIES = 'minisitee-cookies';
-  var aviso = null;
+  var jaViu = null;
+  try { jaViu = localStorage.getItem(CHAVE_COOKIES); } catch (e) {}
 
-  function lerEscolha() {
-    try { return localStorage.getItem(CHAVE_COOKIES); } catch (e) { return null; }
-  }
-
-  function apagarCookiesAnalytics() {
-    var dominio = location.hostname.replace(/^www\./, '');
-    document.cookie.split(';').forEach(function (par) {
-      var nome = par.split('=')[0].trim();
-      if (nome !== '_ga' && nome.indexOf('_ga_') !== 0) return;
-      ['', '; domain=' + dominio, '; domain=.' + dominio].forEach(function (sufixo) {
-        document.cookie = nome + '=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/' + sufixo;
-      });
-    });
-  }
-
-  function fecharAviso() {
-    if (!aviso) return;
-    aviso.remove();
-    aviso = null;
-  }
-
-  function escolher(valor) {
-    try { localStorage.setItem(CHAVE_COOKIES, valor); } catch (e) {}
-    if (typeof window.gtag === 'function') {
-      window.gtag('consent', 'update', { analytics_storage: valor === 'aceito' ? 'granted' : 'denied' });
-    }
-    if (valor === 'recusado') apagarCookiesAnalytics();
-    fecharAviso();
-  }
-
-  function abrirAviso() {
-    if (aviso) return;
-    aviso = document.createElement('section');
+  if (!jaViu) {
+    var aviso = document.createElement('section');
     aviso.className = 'aviso-cookies';
     aviso.setAttribute('aria-label', 'Aviso de cookies');
     aviso.innerHTML =
-      '<p>Com a sua permissão, usamos o Google Analytics para contar visitas e entender o que funciona no site. ' +
+      '<p>Usamos o Google Analytics para contar visitas e entender o que funciona no site. ' +
       '<a href="/cookies/" target="_blank" rel="noopener">Política de cookies</a></p>' +
       '<div class="aviso-cookies-botoes">' +
-        '<button type="button" class="btn btn-contorno" data-escolha="recusado">Recusar</button>' +
-        '<button type="button" class="btn btn-contorno" data-escolha="aceito">Aceitar</button>' +
+        '<button type="button" class="btn btn-contorno">Entendi</button>' +
       '</div>';
-    aviso.addEventListener('click', function (e) {
-      var botao = e.target.closest('[data-escolha]');
-      if (botao) escolher(botao.getAttribute('data-escolha'));
+    aviso.querySelector('button').addEventListener('click', function () {
+      try { localStorage.setItem(CHAVE_COOKIES, 'visto'); } catch (e) {}
+      aviso.remove();
     });
     document.body.appendChild(aviso);
   }
-
-  if (!lerEscolha()) abrirAviso();
-
-  document.querySelectorAll('[data-preferencias-cookies]').forEach(function (botao) {
-    botao.addEventListener('click', abrirAviso);
-  });
 
   /* ---------- Ano do rodapé ---------- */
   var ano = document.getElementById('ano');

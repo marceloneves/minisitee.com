@@ -2,24 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<!-- Google tag (gtag.js). Começa sem gravar cookies: a medição só é liberada
-     quando o visitante aceita no aviso de cookies (script.js). -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLZJL3N327"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  (function () {
-    var escolha = null;
-    try { escolha = localStorage.getItem('minisitee-cookies'); } catch (e) {}
-    gtag('consent', 'default', {
-      analytics_storage: escolha === 'aceito' ? 'granted' : 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
-    });
-  })();
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLZJL3N327"></script>
-<script>
   gtag('js', new Date());
 
   gtag('config', 'G-VLZJL3N327');
@@ -62,7 +49,7 @@
   <div class="limite limite-estreito">
     <p class="etiqueta">Legal</p>
     <h1>Política de cookies</h1>
-    <p class="doc-resumo">A lista honesta: esta página só mede audiência se você aceitar, e o painel usa só o necessário para manter você conectado.</p>
+    <p class="doc-resumo">A lista honesta: esta página mede a audiência com o Google Analytics, e o painel usa só o necessário para manter você conectado.</p>
     <p class="doc-data">Última atualização: 13 de setembro de 2026</p>
 
     <nav class="sumario" aria-label="Nesta página">
@@ -83,7 +70,7 @@
     </section>
     <section class="doc-secao" id="quais">
       <h2>2. Quais cookies usamos</h2>
-      <p>Esta página de apresentação (minisitee.com) usa o Google Analytics para contar visitas, mas <strong>só grava os cookies dele se você aceitar</strong> no aviso que aparece na primeira visita. Se você recusar ou ignorar o aviso, fica gravada apenas a sua escolha.</p>
+      <p>Esta página de apresentação (minisitee.com) usa o Google Analytics para contar visitas e entender como o site é usado. Na primeira visita, um aviso informa isso; ao fechá-lo, fica gravado só que você já o viu.</p>
       <div class="tabela-rolagem">
       <table class="tabela">
         <thead>
@@ -92,17 +79,17 @@
         <tbody>
           <tr>
             <td><code>minisitee-cookies</code></td>
-            <td>Guarda no armazenamento local do navegador se você aceitou ou recusou a medição, para não perguntar de novo a cada página. Estritamente necessário.</td>
+            <td>Guarda no armazenamento local do navegador que você já viu o aviso de cookies, para não mostrá-lo de novo a cada página.</td>
             <td>Até você limpar os dados do navegador</td>
           </tr>
           <tr>
             <td><code>_ga</code></td>
-            <td>Google Analytics: diferencia um visitante de outro para contar visitas únicas. <strong>Só com o seu aceite.</strong></td>
+            <td>Google Analytics: diferencia um visitante de outro para contar visitas únicas.</td>
             <td>2 anos</td>
           </tr>
           <tr>
             <td><code>_ga_VLZJL3N327</code></td>
-            <td>Google Analytics: mantém o estado da visita em andamento. <strong>Só com o seu aceite.</strong></td>
+            <td>Google Analytics: mantém o estado da visita em andamento.</td>
             <td>2 anos</td>
           </tr>
         </tbody>
@@ -128,7 +115,7 @@
         </tbody>
       </table>
     </div>
-      <p>Os cookies do painel são estritamente necessários e dispensam consentimento prévio, porque sem eles o serviço que você pediu não funciona. Já os do Google Analytics são opcionais: só entram depois do seu aceite, e recusar não muda nada na sua navegação.</p>
+      <p>Os cookies do painel são estritamente necessários e dispensam consentimento prévio, porque sem eles o serviço que você pediu não funciona. Os do Google Analytics servem só para medir a audiência deste site e não interferem na sua navegação.</p>
     </section>
     <section class="doc-secao" id="naousamos">
       <h2>3. O que não usamos</h2>
@@ -138,19 +125,18 @@
     <section class="doc-secao" id="terceiros">
       <h2>4. Cookies de terceiros</h2>
       <p><strong>Stripe.</strong> Ao clicar para assinar o Pro, você é levado ao ambiente de pagamento da Stripe, que usa cookies próprios (como <code>__stripe_mid</code> e <code>__stripe_sid</code>) para prevenir fraude. Eles são criados no domínio da Stripe e regidos pela política dela.</p>
-      <p><strong>Google Analytics.</strong> Se você aceitar, o Google Analytics grava os cookies <code>_ga</code> e <code>_ga_VLZJL3N327</code> e recebe dados da sua navegação neste site — páginas vistas, de onde veio a visita, tipo de aparelho e localização aproximada — para gerar relatórios de audiência, tratados conforme a política do Google. Se você recusar, nenhum cookie do Analytics é gravado, e o Google recebe apenas sinais sem identificador, que não permitem reconhecer você de uma visita para outra.</p>
+      <p><strong>Google Analytics.</strong> O Google Analytics grava os cookies <code>_ga</code> e <code>_ga_VLZJL3N327</code> e recebe dados da sua navegação neste site — páginas vistas, de onde veio a visita, tipo de aparelho e localização aproximada — para gerar relatórios de audiência, tratados conforme a política do Google.</p>
       <p><strong>Google Fonts.</strong> A fonte deste site vem dos servidores do Google. Isso não cria cookies, mas o Google recebe o seu endereço IP para entregar o arquivo da fonte.</p>
       <p><strong>WhatsApp, Instagram, mapas e links externos.</strong> Ao tocar nesses botões você sai do minisitee, e passam a valer as políticas de cada serviço.</p>
     </section>
     <section class="doc-secao" id="gerenciar">
       <h2>5. Como controlar no navegador</h2>
       <p>Você pode apagar ou bloquear cookies nas configurações do seu navegador — em geral em "Privacidade e segurança". Guarde só um detalhe: se bloquear os cookies necessários, o login no painel deixa de funcionar, porque o navegador esquece que você entrou. A navegação por esta página de apresentação continua normal.</p>
-      <p>Para mudar a sua escolha sobre o Google Analytics — aceitar agora ou retirar um aceite dado antes —, use o botão abaixo. Ao recusar, apagamos os cookies do Analytics deste navegador.</p>
-      <p><button type="button" class="btn btn-contorno" data-preferencias-cookies>Rever minha escolha de cookies</button></p>
+      <p>Se preferir não ser contado, bloqueie os cookies deste site nas configurações do seu navegador ou instale a <a href="https://tools.google.com/dlpage/gaoptout" target="_blank" rel="noopener">extensão de desativação do Google Analytics</a>.</p>
     </section>
     <section class="doc-secao" id="mudancas">
       <h2>6. Se isso mudar</h2>
-      <p>Se passarmos a usar outra ferramenta de medição ou qualquer novo cookie não essencial, esta política será atualizada e você verá um pedido de consentimento antes de qualquer coisa ser gravada — com a opção de recusar sem perder acesso ao serviço.</p>
+      <p>Se passarmos a usar outra ferramenta de medição ou qualquer novo cookie não essencial, esta política será atualizada antes da mudança.</p>
       <p>Dúvidas sobre cookies e dados pessoais: <a href="/privacidade/" target="_blank" rel="noopener">Política de Privacidade</a> ou <a href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">privacidade@minisitee.com</a>.</p>
     </section>
 
@@ -214,6 +200,6 @@
   </div>
 </footer>
 
-<script src="/script.js?v=20260913" defer></script>
+<script src="/script.js?v=20260913b" defer></script>
 </body>
 </html>

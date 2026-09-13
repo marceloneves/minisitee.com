@@ -2,24 +2,11 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
-<!-- Google tag (gtag.js). Começa sem gravar cookies: a medição só é liberada
-     quando o visitante aceita no aviso de cookies (script.js). -->
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLZJL3N327"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
-  (function () {
-    var escolha = null;
-    try { escolha = localStorage.getItem('minisitee-cookies'); } catch (e) {}
-    gtag('consent', 'default', {
-      analytics_storage: escolha === 'aceito' ? 'granted' : 'denied',
-      ad_storage: 'denied',
-      ad_user_data: 'denied',
-      ad_personalization: 'denied'
-    });
-  })();
-</script>
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLZJL3N327"></script>
-<script>
   gtag('js', new Date());
 
   gtag('config', 'G-VLZJL3N327');
@@ -96,7 +83,7 @@
       <p><strong>Dados de perfil.</strong> Nome de exibição, endereço escolhido, frase de apresentação, bio, cidade, número de WhatsApp, foto de perfil e idioma da página. Você decide o que preencher.</p>
       <p><strong>Conteúdo que você publica.</strong> Itens do catálogo, preços, categorias, fotos, arquivos enviados (como cardápio em PDF), horários, endereço comercial e links de redes sociais.</p>
       <p><strong>Dados de assinatura.</strong> Se você assina o plano Pro, a Stripe processa o pagamento e nos devolve apenas o identificador da assinatura, o status e a data de renovação. <strong>Não recebemos nem armazenamos o número do seu cartão.</strong></p>
-      <p><strong>Dados técnicos.</strong> Registros de acesso (endereço IP, data, hora e ação), necessários por segurança e exigidos pelo art. 15 do Marco Civil da Internet, além dos cookies descritos na <a href="/cookies/" target="_blank" rel="noopener">Política de Cookies</a>. Se você aceitar no aviso de cookies, também coletamos pelo Google Analytics dados da navegação neste site: páginas vistas, de onde veio a visita, tipo de aparelho e localização aproximada.</p>
+      <p><strong>Dados técnicos.</strong> Registros de acesso (endereço IP, data, hora e ação), necessários por segurança e exigidos pelo art. 15 do Marco Civil da Internet, além dos cookies descritos na <a href="/cookies/" target="_blank" rel="noopener">Política de Cookies</a>. Pelo Google Analytics, também coletamos dados da navegação neste site: páginas vistas, de onde veio a visita, tipo de aparelho e localização aproximada.</p>
       <p>Não coletamos dados sensíveis (origem racial, opinião política, religião, saúde, biometria) e pedimos que você também não os publique na sua página.</p>
     </section>
     <section class="doc-secao" id="publico">
@@ -106,12 +93,12 @@
     </section>
     <section class="doc-secao" id="finalidades">
       <h2>4. Para que usamos os dados</h2>
-      <p>Usamos os dados para: criar e manter sua conta; publicar e exibir sua página; permitir que visitantes falem com você; processar a assinatura e emitir cobranças; prestar suporte; prevenir fraude e abuso; cumprir obrigações legais; melhorar o produto a partir de uso agregado; e, com o seu consentimento, medir a audiência deste site.</p>
+      <p>Usamos os dados para: criar e manter sua conta; publicar e exibir sua página; permitir que visitantes falem com você; processar a assinatura e emitir cobranças; prestar suporte; prevenir fraude e abuso; cumprir obrigações legais; melhorar o produto a partir de uso agregado; e medir a audiência deste site.</p>
       <p><strong>Não vendemos seus dados</strong> e não os usamos para publicidade de terceiros.</p>
     </section>
     <section class="doc-secao" id="bases">
       <h2>5. Bases legais</h2>
-      <p>Tratamos dados com fundamento em: <strong>execução de contrato</strong> (art. 7º, V da LGPD) para prestar o serviço e cobrar a assinatura; <strong>cumprimento de obrigação legal</strong> (art. 7º, II) para guarda de registros e obrigações fiscais; <strong>legítimo interesse</strong> (art. 7º, IX) para segurança, prevenção a fraude e melhoria do produto; e <strong>consentimento</strong> (art. 7º, I) quando você opta por publicar informações adicionais na página, aceita comunicações opcionais ou aceita a medição de audiência pelo Google Analytics — consentimento que você pode retirar a qualquer momento na <a href="/cookies/" target="_blank" rel="noopener">Política de Cookies</a>.</p>
+      <p>Tratamos dados com fundamento em: <strong>execução de contrato</strong> (art. 7º, V da LGPD) para prestar o serviço e cobrar a assinatura; <strong>cumprimento de obrigação legal</strong> (art. 7º, II) para guarda de registros e obrigações fiscais; <strong>legítimo interesse</strong> (art. 7º, IX) para segurança, prevenção a fraude, melhoria do produto e medição da audiência deste site pelo Google Analytics; e <strong>consentimento</strong> (art. 7º, I) quando você opta por publicar informações adicionais na página ou aceita comunicações opcionais.</p>
     </section>
     <section class="doc-secao" id="compartilhamento">
       <h2>6. Com quem compartilhamos</h2>
@@ -120,7 +107,7 @@
         <li><strong>Supabase</strong> — banco de dados, autenticação e armazenamento das fotos e arquivos.</li>
         <li><strong>Vercel</strong> — hospedagem e entrega das páginas.</li>
         <li><strong>Stripe</strong> — processamento dos pagamentos da assinatura Pro.</li>
-        <li><strong>Google Analytics</strong> — medição de audiência deste site, só se você aceitar no aviso de cookies. Os recursos de publicidade ficam desligados.</li>
+        <li><strong>Google Analytics</strong> — medição de audiência deste site. Os recursos de publicidade ficam desligados.</li>
         <li><strong>Google Fonts</strong> — a fonte usada neste site é carregada dos servidores do Google, que recebe o seu IP para entregar o arquivo. Nenhum cookie é criado por isso.</li>
       </ul>
       <p>Também podemos compartilhar dados para cumprir ordem judicial ou requisição de autoridade competente, e em caso de reorganização societária, mantidas as obrigações desta política.</p>
@@ -222,6 +209,6 @@
   </div>
 </footer>
 
-<script src="/script.js?v=20260913" defer></script>
+<script src="/script.js?v=20260913b" defer></script>
 </body>
 </html>
