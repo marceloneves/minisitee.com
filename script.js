@@ -95,9 +95,10 @@
       e.preventDefault();
       var apelido = apelidar(campo.value);
 
-      if (apelido.length < 3) {
+      // Mesmo mínimo do app: o endereço precisa ter de 7 a 30 caracteres.
+      if (apelido.length < 7) {
         if (nota) {
-          nota.textContent = 'Escolha um endereço com pelo menos 3 letras — ex.: doceriadaana.';
+          nota.textContent = 'Escolha um endereço com pelo menos 7 caracteres — ex.: doceriadaana.';
           nota.classList.add('alerta');
         }
         campo.focus();
