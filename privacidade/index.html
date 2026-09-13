@@ -12,28 +12,54 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/styles.css?v=20260912">
+<link rel="stylesheet" href="/assets/site.css?v=20260912">
 </head>
 <body>
 
-<a class="pular" href="#conteudo">Pular para o conteúdo</a>
+<a class="btn btn-default btn-sm sr-only focus:not-sr-only focus:fixed focus:top-3 focus:left-3 focus:z-[60]" href="#conteudo">Pular para o conteúdo</a>
 
-<header class="cabecalho grudado">
-  <div class="faixa">
-    <a class="marca" href="/" aria-label="minisitee — início">
-      <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
-        <rect width="32" height="32" rx="9"/>
-        <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
-            fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<header id="cabecalho" class="sticky top-0 z-50 border-b border-transparent bg-background/70 backdrop-blur-xl transition-colors data-[rolado=true]:border-border data-[rolado=true]:bg-background/85">
+  <div class="mx-auto flex h-16 max-w-6xl items-center justify-between gap-6 px-5">
+    <a class="flex items-center gap-2.5" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
+      <svg class="size-7" viewBox="0 0 32 32" aria-hidden="true">
+        <rect width="32" height="32" rx="9" fill="#111113"/>
+        <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23" fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
       </svg>
-      <span class="marca-nome">minisit<span>ee</span></span>
+      <span class="text-[15px] font-semibold tracking-tight">minisit<span class="text-muted-foreground">ee</span></span>
     </a>
 
-    <nav class="menu menu-doc" aria-label="Navegação">
-      <a href="/">Voltar ao site</a>
-      <a class="btn btn-solido" href="https://app.minisitee.com/login">Criar meu minisitee</a>
+    <nav class="hidden items-center gap-0.5 lg:flex" aria-label="Navegação principal">
+      <a class="nav-link" href="/" target="_blank" rel="noopener">Início</a>
+      <a class="nav-link" href="/#oque" target="_blank" rel="noopener">O que é</a>
+      <a class="nav-link" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
+      <a class="nav-link" href="/#como" target="_blank" rel="noopener">Como funciona</a>
+      <a class="nav-link" href="/#precos" target="_blank" rel="noopener">Preços</a>
+      <a class="nav-link" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
+      <a class="nav-link" href="/blog/" target="_blank" rel="noopener">Blog</a>
     </nav>
+
+    <div class="hidden items-center gap-2 lg:flex">
+      <a class="btn btn-default btn-sm" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
+    </div>
+
+    <button class="group btn btn-ghost btn-icon lg:hidden" id="hamburguer" type="button" aria-expanded="false" aria-controls="menu" aria-label="Abrir menu">
+      <svg class="block group-aria-expanded:hidden" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="M2.5 4.5h11M2.5 8h11M2.5 11.5h11"/></svg>
+      <svg class="hidden group-aria-expanded:block" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" aria-hidden="true"><path d="m4 4 8 8m0-8-8 8"/></svg>
+    </button>
   </div>
+
+  <nav class="hidden border-t border-border bg-background px-5 pt-3 pb-5 lg:hidden" id="menu" aria-label="Menu">
+    <div class="mx-auto flex max-w-6xl flex-col gap-0.5">
+      <a class="nav-link-mobile" href="/" target="_blank" rel="noopener">Início</a>
+      <a class="nav-link-mobile" href="/#oque" target="_blank" rel="noopener">O que é</a>
+      <a class="nav-link-mobile" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
+      <a class="nav-link-mobile" href="/#como" target="_blank" rel="noopener">Como funciona</a>
+      <a class="nav-link-mobile" href="/#precos" target="_blank" rel="noopener">Preços</a>
+      <a class="nav-link-mobile" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
+      <a class="nav-link-mobile" href="/blog/" target="_blank" rel="noopener">Blog</a>
+      <a class="btn btn-default mt-3" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar meu minisitee</a>
+    </div>
+  </nav>
 </header>
 
 <main class="doc" id="conteudo">
@@ -46,20 +72,20 @@
     <nav class="sumario" aria-label="Nesta página">
       <p class="sumario-titulo">Nesta página</p>
       <ol>
-        <li><a href="#controlador">Quem trata os seus dados</a></li>
-        <li><a href="#dados">Que dados coletamos</a></li>
-        <li><a href="#publico">O que fica público na sua página</a></li>
-        <li><a href="#finalidades">Para que usamos</a></li>
-        <li><a href="#bases">Bases legais</a></li>
-        <li><a href="#compartilhamento">Com quem compartilhamos</a></li>
-        <li><a href="#internacional">Transferência internacional</a></li>
-        <li><a href="#prazo">Por quanto tempo guardamos</a></li>
-        <li><a href="#direitos">Seus direitos</a></li>
-        <li><a href="#seguranca">Segurança</a></li>
-        <li><a href="#visitantes">Visitantes da sua página</a></li>
-        <li><a href="#criancas">Crianças e adolescentes</a></li>
-        <li><a href="#mudancas">Mudanças nesta política</a></li>
-        <li><a href="#contato">Como falar conosco</a></li>
+        <li><a href="#controlador" target="_blank" rel="noopener">Quem trata os seus dados</a></li>
+        <li><a href="#dados" target="_blank" rel="noopener">Que dados coletamos</a></li>
+        <li><a href="#publico" target="_blank" rel="noopener">O que fica público na sua página</a></li>
+        <li><a href="#finalidades" target="_blank" rel="noopener">Para que usamos</a></li>
+        <li><a href="#bases" target="_blank" rel="noopener">Bases legais</a></li>
+        <li><a href="#compartilhamento" target="_blank" rel="noopener">Com quem compartilhamos</a></li>
+        <li><a href="#internacional" target="_blank" rel="noopener">Transferência internacional</a></li>
+        <li><a href="#prazo" target="_blank" rel="noopener">Por quanto tempo guardamos</a></li>
+        <li><a href="#direitos" target="_blank" rel="noopener">Seus direitos</a></li>
+        <li><a href="#seguranca" target="_blank" rel="noopener">Segurança</a></li>
+        <li><a href="#visitantes" target="_blank" rel="noopener">Visitantes da sua página</a></li>
+        <li><a href="#criancas" target="_blank" rel="noopener">Crianças e adolescentes</a></li>
+        <li><a href="#mudancas" target="_blank" rel="noopener">Mudanças nesta política</a></li>
+        <li><a href="#contato" target="_blank" rel="noopener">Como falar conosco</a></li>
       </ol>
     </nav>
 
@@ -74,7 +100,7 @@
       <p><strong>Dados de perfil.</strong> Nome de exibição, endereço escolhido, frase de apresentação, bio, cidade, número de WhatsApp, foto de perfil e idioma da página. Você decide o que preencher.</p>
       <p><strong>Conteúdo que você publica.</strong> Itens do catálogo, preços, categorias, fotos, arquivos enviados (como cardápio em PDF), horários, endereço comercial e links de redes sociais.</p>
       <p><strong>Dados de assinatura.</strong> Se você assina o plano Pro, a Stripe processa o pagamento e nos devolve apenas o identificador da assinatura, o status e a data de renovação. <strong>Não recebemos nem armazenamos o número do seu cartão.</strong></p>
-      <p><strong>Dados técnicos.</strong> Registros de acesso (endereço IP, data, hora e ação), necessários por segurança e exigidos pelo art. 15 do Marco Civil da Internet, além dos cookies descritos na <a href="/cookies/">Política de Cookies</a>.</p>
+      <p><strong>Dados técnicos.</strong> Registros de acesso (endereço IP, data, hora e ação), necessários por segurança e exigidos pelo art. 15 do Marco Civil da Internet, além dos cookies descritos na <a href="/cookies/" target="_blank" rel="noopener">Política de Cookies</a>.</p>
       <p>Não coletamos dados sensíveis (origem racial, opinião política, religião, saúde, biometria) e pedimos que você também não os publique na sua página.</p>
     </section>
     <section class="doc-secao" id="publico">
@@ -114,7 +140,7 @@
     <section class="doc-secao" id="direitos">
       <h2>9. Seus direitos</h2>
       <p>A LGPD (art. 18) garante a você o direito de: confirmar que tratamos seus dados; acessá-los; corrigir dados incompletos ou desatualizados; pedir anonimização, bloqueio ou eliminação de dados desnecessários; solicitar portabilidade; obter informação sobre com quem compartilhamos; revogar consentimento; e se opor a tratamentos feitos com base em legítimo interesse.</p>
-      <p>Boa parte disso você resolve sozinho no painel — editar perfil, remover itens, encerrar a conta. Para os demais pedidos, escreva para <a href="mailto:privacidade@minisitee.com">privacidade@minisitee.com</a>. Respondemos em até 15 dias e podemos pedir informação adicional para confirmar sua identidade antes de atender.</p>
+      <p>Boa parte disso você resolve sozinho no painel — editar perfil, remover itens, encerrar a conta. Para os demais pedidos, escreva para <a href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">privacidade@minisitee.com</a>. Respondemos em até 15 dias e podemos pedir informação adicional para confirmar sua identidade antes de atender.</p>
     </section>
     <section class="doc-secao" id="seguranca">
       <h2>10. Segurança</h2>
@@ -135,70 +161,70 @@
     </section>
     <section class="doc-secao" id="contato">
       <h2>14. Como falar conosco</h2>
-      <p>Encarregado pelo tratamento de dados pessoais (DPO): <a href="mailto:privacidade@minisitee.com">privacidade@minisitee.com</a>.</p>
-      <p>Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD), em <a href="https://www.gov.br/anpd" rel="noopener">gov.br/anpd</a>.</p>
+      <p>Encarregado pelo tratamento de dados pessoais (DPO): <a href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">privacidade@minisitee.com</a>.</p>
+      <p>Você também pode apresentar reclamação à Autoridade Nacional de Proteção de Dados (ANPD), em <a href="https://www.gov.br/anpd" rel="noopener" target="_blank" rel="noopener">gov.br/anpd</a>.</p>
     </section>
 
 
     <p class="doc-fim">
       Ficou alguma dúvida sobre este documento? Escreva para
-      <a href="mailto:privacidade@minisitee.com">privacidade@minisitee.com</a>.
+      <a href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">privacidade@minisitee.com</a>.
     </p>
   </div>
 </main>
 
-<footer class="rodape">
-  <div class="limite rodape-grade">
-    <div class="rodape-marca">
-      <a class="marca" href="/" aria-label="minisitee — início">
-        <svg class="monograma" viewBox="0 0 32 32" aria-hidden="true">
-          <rect width="32" height="32" rx="9"/>
-          <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23"
-                fill="none" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
+<footer class="border-t border-border">
+  <div class="mx-auto grid max-w-6xl gap-10 px-5 py-14 sm:grid-cols-3 lg:grid-cols-[1.6fr_1fr_1fr_1fr]">
+    <div class="sm:col-span-3 lg:col-span-1">
+      <a class="flex w-fit items-center gap-2.5" href="/" aria-label="minisitee — início" target="_blank" rel="noopener">
+        <svg class="size-7" viewBox="0 0 32 32" aria-hidden="true">
+          <rect width="32" height="32" rx="9" fill="#111113"/>
+          <path d="M9 23V15.2a3.6 3.6 0 0 1 7.2 0V23M16.2 15.2a3.6 3.6 0 0 1 7.2 0V23" fill="none" stroke="#ffffff" stroke-width="2.9" stroke-linecap="round" stroke-linejoin="round"/>
         </svg>
-        <span class="marca-nome">minisit<span>ee</span></span>
+        <span class="text-[15px] font-semibold tracking-tight">minisit<span class="text-muted-foreground">ee</span></span>
       </a>
-      <p class="rodape-frase">Seu catálogo em um link, pronto para o Instagram.</p>
-      <p class="rodape-empresa">
-        minisitee é operado por <strong>[RAZÃO SOCIAL LTDA]</strong><br>
+      <p class="mt-4 max-w-xs text-[13.5px] leading-relaxed text-muted-foreground">Seu catálogo em um link, pronto para o Instagram.</p>
+      <p class="mt-4 text-[12.5px] leading-relaxed text-muted-foreground/80">
+        minisitee é operado por <strong class="font-medium text-foreground/80">[RAZÃO SOCIAL LTDA]</strong><br>
         CNPJ [00.000.000/0001-00] · [Cidade/UF], Brasil
       </p>
     </div>
 
     <nav aria-label="Produto">
-      <p class="rodape-titulo">Produto</p>
-      <a href="/#blocos">Recursos</a>
-      <a href="/#como">Como funciona</a>
-      <a href="/#precos">Preços</a>
-      <a href="/#duvidas">Dúvidas</a>
+      <p class="footer-title">Produto</p>
+      <a class="footer-link" href="/#blocos" target="_blank" rel="noopener">Recursos</a>
+      <a class="footer-link" href="/#como" target="_blank" rel="noopener">Como funciona</a>
+      <a class="footer-link" href="/#precos" target="_blank" rel="noopener">Preços</a>
+      <a class="footer-link" href="/#duvidas" target="_blank" rel="noopener">Dúvidas</a>
+      <a class="footer-link" href="/blog/" target="_blank" rel="noopener">Blog</a>
     </nav>
 
     <nav aria-label="Conta">
-      <p class="rodape-titulo">Conta</p>
-      <a href="https://app.minisitee.com/login">Entrar</a>
-      <a href="https://app.minisitee.com/login">Criar conta</a>
-      <a href="mailto:suporte@minisitee.com">Suporte</a>
+      <p class="footer-title">Conta</p>
+      <a class="footer-link" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Entrar</a>
+      <a class="footer-link" href="https://app.minisitee.com/login" target="_blank" rel="noopener">Criar conta</a>
+      <a class="footer-link" href="mailto:suporte@minisitee.com" target="_blank" rel="noopener">Suporte</a>
     </nav>
 
     <nav aria-label="Legal">
-      <p class="rodape-titulo">Legal</p>
-      <a href="/termos/">Termos de uso</a>
-      <a href="/privacidade/">Política de privacidade</a>
-      <a href="/cookies/">Política de cookies</a>
-      <a href="mailto:privacidade@minisitee.com">Encarregado de dados</a>
+      <p class="footer-title">Legal</p>
+      <a class="footer-link" href="/termos/" target="_blank" rel="noopener">Termos de uso</a>
+      <a class="footer-link" href="/privacidade/" target="_blank" rel="noopener">Política de privacidade</a>
+      <a class="footer-link" href="/cookies/" target="_blank" rel="noopener">Política de cookies</a>
+      <a class="footer-link" href="mailto:privacidade@minisitee.com" target="_blank" rel="noopener">Encarregado de dados</a>
     </nav>
   </div>
 
-  <div class="limite rodape-fim">
+  <div class="mx-auto flex max-w-6xl flex-col gap-3 border-t border-border px-5 py-6 text-[13px] text-muted-foreground sm:flex-row sm:items-center sm:justify-between">
     <p>© <span id="ano">2026</span> minisitee · Todos os direitos reservados</p>
-    <p class="rodape-links">
-      <a href="/termos/">Termos</a>
-      <a href="/privacidade/">Privacidade</a>
-      <a href="/cookies/">Cookies</a>
+    <p class="flex gap-5">
+      <a class="transition-colors hover:text-foreground" href="/termos/" target="_blank" rel="noopener">Termos</a>
+      <a class="transition-colors hover:text-foreground" href="/privacidade/" target="_blank" rel="noopener">Privacidade</a>
+      <a class="transition-colors hover:text-foreground" href="/cookies/" target="_blank" rel="noopener">Cookies</a>
     </p>
   </div>
 </footer>
 
-<script src="/script.js" defer></script>
+<script src="/script.js?v=20260912" defer></script>
 </body>
 </html>
