@@ -2,6 +2,28 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8">
+<!-- Google tag (gtag.js). Começa sem gravar cookies: a medição só é liberada
+     quando o visitante aceita no aviso de cookies (script.js). -->
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  (function () {
+    var escolha = null;
+    try { escolha = localStorage.getItem('minisitee-cookies'); } catch (e) {}
+    gtag('consent', 'default', {
+      analytics_storage: escolha === 'aceito' ? 'granted' : 'denied',
+      ad_storage: 'denied',
+      ad_user_data: 'denied',
+      ad_personalization: 'denied'
+    });
+  })();
+</script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-VLZJL3N327"></script>
+<script>
+  gtag('js', new Date());
+
+  gtag('config', 'G-VLZJL3N327');
+</script>
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Termos de uso · minisitee</title>
 <meta name="description" content="Termos de uso do minisitee: conta, conteúdo publicado, planos, cobrança anual, cancelamento e responsabilidades.">
@@ -12,7 +34,7 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap">
-<link rel="stylesheet" href="/styles.css?v=20260913">
+<link rel="stylesheet" href="/styles.css?v=20260913b">
 </head>
 <body>
 
@@ -195,6 +217,6 @@
   </div>
 </footer>
 
-<script src="/script.js" defer></script>
+<script src="/script.js?v=20260913" defer></script>
 </body>
 </html>

@@ -851,3 +851,29 @@ a { color: inherit; text-decoration: none; }
 }
 .artigo-cta h2 { font-size: 26px; letter-spacing: -.03em; }
 .artigo-cta p { margin: 10px auto 22px; max-width: 30em; color: var(--muted); }
+
+
+/* ================= Aviso de cookies ================= */
+/* Recusar e Aceitar têm o mesmo peso visual de propósito: recusar precisa
+   ser tão fácil quanto aceitar. */
+.aviso-cookies {
+  position: fixed; left: 16px; right: 16px; bottom: 16px; z-index: 60;
+  max-width: 600px; margin-inline: auto;
+  display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px;
+  padding: 18px 20px;
+  background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg);
+  box-shadow: var(--sombra-3);
+}
+.aviso-cookies p { flex: 1 1 280px; font-size: 15.5px; line-height: 1.55; color: #3f3f46; }
+.aviso-cookies a { color: var(--fg); border-bottom: 1px solid var(--border); white-space: nowrap; }
+.aviso-cookies a:hover { border-bottom-color: var(--fg); }
+.aviso-cookies-botoes { display: flex; gap: 10px; margin-left: auto; }
+
+@media (max-width: 480px) {
+  .aviso-cookies-botoes { width: 100%; }
+  .aviso-cookies-botoes .btn { flex: 1; }
+}
+
+@media print {
+  .aviso-cookies { display: none; }
+}
