@@ -127,6 +127,7 @@ a { color: inherit; text-decoration: none; }
 
 .menu { display: flex; align-items: center; gap: 6px; }
 .menu > a:not(.btn) {
+  white-space: nowrap;
   font-size: 15.5px; color: var(--muted); padding: 8px 12px; border-radius: var(--r-sm);
   transition: color .18s ease;
 }
@@ -676,7 +677,8 @@ a { color: inherit; text-decoration: none; }
   .rodape-grade > div:first-child { grid-column: 1 / -1; }
 }
 
-@media (max-width: 760px) {
+/* o menu completo precisa de ~1100px numa linha; abaixo disso vira hambúrguer */
+@media (max-width: 1100px) {
   .hamburguer { display: flex; }
   .menu {
     position: absolute; left: 12px; right: 12px; top: calc(100% + 8px);
@@ -691,6 +693,11 @@ a { color: inherit; text-decoration: none; }
   .menu .btn { width: 100%; margin: 0; }
   .menu-entrar { border: 1px solid var(--border); margin-top: 6px; }
   .faixa { position: relative; }
+  .menu-doc { position: static; display: flex; flex-direction: row; padding: 0; border: 0; box-shadow: none; background: none; }
+  .menu-doc .btn { width: auto; }
+}
+
+@media (max-width: 760px) {
   .publico { justify-content: center; }
   .publico li { font-size: 15px; padding: 9px 15px; }
 }
@@ -798,10 +805,20 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 760px) {
   .sumario ol { columns: 1; }
   .rodape-fim { flex-direction: column; align-items: flex-start; }
-  .menu-doc { position: static; display: flex; flex-direction: row; padding: 0; border: 0; box-shadow: none; background: none; }
-  .menu-doc .btn { width: auto; }
 }
 
 @media (max-width: 520px) {
   .menu-doc .btn { display: none; }
 }
+
+
+/* ================= Blog ================= */
+.blog-vazio {
+  margin-top: 40px;
+  padding: 32px 28px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--r-lg);
+}
+.blog-vazio-titulo { font-size: 19px; font-weight: 600; letter-spacing: -.02em; margin-bottom: 8px; }
+.blog-vazio p:not(.blog-vazio-titulo) { color: var(--muted); margin-bottom: 20px; }
