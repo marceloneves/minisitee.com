@@ -184,25 +184,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 .captura { display: flex; gap: 10px; margin-top: 30px; flex-wrap: wrap; }
-.captura-campo {
-  display: flex; align-items: center; flex: 1 1 300px; min-width: 0;
-  background: var(--bg);
-  border: 1px solid var(--border); border-radius: 999px;
-  padding: 4px 6px 4px 18px;
-  box-shadow: var(--sombra-1);
-  transition: border-color .18s ease, box-shadow .18s ease;
-}
-.captura-campo:focus-within { border-color: var(--fg); box-shadow: var(--sombra-2); }
-.captura-prefixo { font-size: 16px; color: var(--muted); white-space: nowrap; }
-.captura-campo input {
-  flex: 1; width: 100%; min-width: 60px;
-  border: 0; outline: 0; background: none;
-  font: inherit; font-size: 16px; color: var(--fg);
-  padding: 12px 8px 12px 0;
-}
-.captura .btn { flex: 0 0 auto; }
 .captura-nota { margin-top: 12px; font-size: 14.5px; color: var(--muted); }
-.captura-nota.alerta { color: #b91c1c; }
 
 .selos { display: flex; flex-wrap: wrap; gap: 8px 22px; margin-top: 26px; }
 .selos li { font-size: 14.5px; color: var(--muted); display: flex; align-items: center; gap: 8px; }
@@ -672,8 +654,6 @@ a { color: inherit; text-decoration: none; }
 
 /* ---------------- Responsivo ---------------- */
 @media (max-width: 900px) {
-  /* minmax(0, …) como no desktop: com 1fr puro o Safari deixava a largura
-     mínima do input alargar a coluna além da tela, e o .hero cortava */
   .hero-grade { grid-template-columns: minmax(0, 1fr); }
   .hero-texto { text-align: center; }
   .hero-texto .chamada, .hero-texto .captura { margin-inline: auto; }
@@ -711,10 +691,6 @@ a { color: inherit; text-decoration: none; }
 
 @media (max-width: 480px) {
   body { font-size: 16.5px; }
-  .captura { flex-direction: column; }
-  /* em coluna, o flex-basis de 300px viraria altura e o campo esticava
-     numa elipse — aqui ele volta a ter a altura do conteúdo */
-  .captura-campo { flex: 0 0 auto; width: 100%; }
   .captura .btn { width: 100%; }
   .rodape-grade { grid-template-columns: 1fr; }
 }
@@ -861,12 +837,15 @@ a { color: inherit; text-decoration: none; }
   max-width: 600px; margin-inline: auto;
   display: flex; flex-wrap: wrap; align-items: center; gap: 14px 20px;
   padding: 18px 20px;
-  background: var(--bg); border: 1px solid var(--border); border-radius: var(--r-lg);
+  /* escuro, no tom do rodapé, para não se confundir com os cartões brancos */
+  background: var(--fg); border: 1px solid #3f3f46; border-radius: var(--r-lg);
   box-shadow: var(--sombra-3);
 }
-.aviso-cookies p { flex: 1 1 280px; font-size: 15.5px; line-height: 1.55; color: #3f3f46; }
-.aviso-cookies a { color: var(--fg); border-bottom: 1px solid var(--border); white-space: nowrap; }
-.aviso-cookies a:hover { border-bottom-color: var(--fg); }
+.aviso-cookies p { flex: 1 1 280px; font-size: 15.5px; line-height: 1.55; color: #d4d4d8; }
+.aviso-cookies a { color: #ffffff; border-bottom: 1px solid #71717a; white-space: nowrap; }
+.aviso-cookies a:hover { border-bottom-color: #ffffff; }
+.aviso-cookies .btn-contorno { background: #ffffff; border-color: #ffffff; color: var(--fg); }
+.aviso-cookies .btn-contorno:hover { background: var(--surface); border-color: var(--surface); }
 .aviso-cookies-botoes { display: flex; gap: 10px; margin-left: auto; }
 
 @media (max-width: 480px) {

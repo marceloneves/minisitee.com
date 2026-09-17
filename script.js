@@ -2,8 +2,6 @@
 (function () {
   'use strict';
 
-  var APP = 'https://app.minisitee.com/login';
-
   /* ---------- Menu no celular ---------- */
   var hamburguer = document.getElementById('hamburguer');
   var menu = document.getElementById('menu');
@@ -55,60 +53,6 @@
     window.addEventListener('scroll', aoRolar, { passive: true });
   }
 
-  /* ---------- Endereço escolhido no hero ---------- */
-  var form = document.getElementById('formUsuario');
-  var campo = document.getElementById('usuario');
-  var url = document.getElementById('urlPreview');
-  var nota = document.getElementById('notaUsuario');
-  var notaPadrao = nota ? nota.textContent : '';
-
-  // Mesma regra do app: minúsculas, sem acento, só letras, números e hífen.
-  function apelidar(valor) {
-    return valor
-      .normalize('NFD')
-      .replace(/[\u0300-\u036f]/g, '')
-      .toLowerCase()
-      .replace(/[^a-z0-9-]+/g, '-')
-      .replace(/-+/g, '-')
-      .replace(/^-|-$/g, '')
-      .slice(0, 30);
-  }
-
-  function atualizarPreview() {
-    if (!url) return;
-    var apelido = apelidar(campo.value) || 'seunome';
-    url.textContent = 'minisitee.com/' + apelido;
-  }
-
-  if (campo) {
-    campo.addEventListener('input', function () {
-      atualizarPreview();
-      if (nota) {
-        nota.textContent = notaPadrao;
-        nota.classList.remove('alerta');
-      }
-    });
-  }
-
-  if (form) {
-    form.addEventListener('submit', function (e) {
-      e.preventDefault();
-      var apelido = apelidar(campo.value);
-
-      // Mesmo mínimo do app: o endereço precisa ter de 7 a 30 caracteres.
-      if (apelido.length < 7) {
-        if (nota) {
-          nota.textContent = 'Escolha um endereço com pelo menos 7 caracteres — ex.: doceriadaana.';
-          nota.classList.add('alerta');
-        }
-        campo.focus();
-        return;
-      }
-
-      window.open(APP + '?u=' + encodeURIComponent(apelido), '_blank', 'noopener');
-    });
-  }
-
   /* ---------- Um item de FAQ aberto por vez (para navegadores sem name em details) ---------- */
   var perguntas = document.querySelectorAll('.faq details');
   var suportaNome = 'name' in document.createElement('details');
@@ -136,8 +80,8 @@
     aviso.className = 'aviso-cookies';
     aviso.setAttribute('aria-label', 'Aviso de cookies');
     aviso.innerHTML =
-      '<p>Usamos o Google Analytics para contar visitas e entender o que funciona no site. ' +
-      '<a href="/cookies/" target="_blank" rel="noopener">Política de cookies</a></p>' +
+      '<p>Este site usa cookies para saber quantas pessoas nos visitam e melhorar a página. ' +
+      '<a href="/cookies/" target="_blank" rel="noopener">Saiba mais</a></p>' +
       '<div class="aviso-cookies-botoes">' +
         '<button type="button" class="btn btn-contorno">Entendi</button>' +
       '</div>';
