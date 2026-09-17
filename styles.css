@@ -197,7 +197,18 @@ a { color: inherit; text-decoration: none; }
 }
 
 /* ---------------- Telefone ---------------- */
-.hero-visual { position: relative; display: flex; justify-content: center; }
+/* Dois celulares na mesma célula: o Instagram na frente, mais baixo e à
+   esquerda, e o minisitee atrás, à direita — do link na bio até a página. */
+.hero-visual { position: relative; display: grid; place-items: center; }
+.hero-visual > .telefone { grid-area: 1 / 1; }
+.telefone.telefone-site { transform: translateX(var(--desloc-site, 20%)); }
+/* a tela do Instagram tem tamanho fixo e só é reduzida por escala,
+   para o texto não embolar quando o aparelho fica menor */
+.telefone.telefone-insta {
+  --larg-tel: 280px;
+  transform: translate(var(--desloc-insta, -43%), var(--desce-insta, 14%)) rotate(-5deg) scale(var(--escala-insta, .86));
+  z-index: 2;
+}
 
 .brilho {
   position: absolute; inset: -14% -22% 12%;
@@ -652,6 +663,78 @@ a { color: inherit; text-decoration: none; }
 .rodape-links a { color: var(--muted-rodape); }
 .rodape-links a:hover { color: #ffffff; }
 
+/* ---------------- Perfil de Instagram fictício ---------------- */
+.insta {
+  background: #ffffff; color: #0f0f10;
+  padding: 40px 12px 0;
+  font-size: 10.5px; line-height: 1.35;
+}
+.insta-topo { display: flex; align-items: center; justify-content: space-between; padding: 2px 2px 10px; }
+.insta-usuario { font-size: 14px; font-weight: 700; letter-spacing: -.01em; }
+.insta-seta { font-size: 11px; font-weight: 400; }
+.insta-icones { display: flex; gap: 10px; }
+.insta-icones span { width: 16px; height: 16px; border: 1.8px solid #0f0f10; border-radius: 5px; }
+.insta-icones span:last-child { border-radius: 50%; }
+
+.insta-cabeca { display: flex; align-items: center; gap: 14px; }
+.insta-avatar {
+  width: 64px; height: 64px; flex: none; padding: 2.5px; border-radius: 50%;
+  background: conic-gradient(from 200deg, #feda75, #fa7e1e, #d62976, #962fbf, #4f5bd5, #feda75);
+}
+.insta-avatar span {
+  display: grid; place-items: center; width: 100%; height: 100%;
+  border-radius: 50%; border: 2.5px solid #ffffff;
+  background: #18181b; color: #ffffff;
+  font-size: 17px; font-weight: 600; letter-spacing: -.02em;
+}
+.insta-numeros { flex: 1; display: flex; justify-content: space-around; text-align: center; }
+.insta-numeros p { font-size: 9.5px; color: #3a3a3f; }
+.insta-numeros strong { display: block; font-size: 13px; color: #0f0f10; }
+
+.insta-bio { margin-top: 9px; }
+.insta-nome { font-weight: 700; font-size: 11px; }
+.insta-categoria { color: #737378; }
+.insta-link {
+  display: inline-flex; align-items: center; gap: 4px;
+  margin: 4px 0 0 -5px; padding: 3px 7px 3px 5px;
+  border-radius: 999px;
+  color: #00376b; font-weight: 600;
+  background: #e0f1ff;
+  box-shadow: 0 0 0 1.5px #0095f6;
+  animation: toque 3.2s ease-in-out infinite;
+}
+.insta-link svg { width: 12px; height: 12px; }
+@keyframes toque {
+  0%, 60%, 100% { box-shadow: 0 0 0 1.5px #0095f6, 0 0 0 0 rgb(0 149 246 / .35); }
+  75%           { box-shadow: 0 0 0 1.5px #0095f6, 0 0 0 7px rgb(0 149 246 / 0); }
+}
+
+.insta-botoes { display: grid; grid-template-columns: 1fr 1fr; gap: 6px; margin-top: 10px; }
+.insta-botoes span {
+  padding: 6px; border-radius: 8px; text-align: center;
+  background: #efeff1; font-weight: 600; font-size: 10.5px;
+}
+.insta-botoes .insta-seguir { background: #0095f6; color: #ffffff; }
+
+.insta-destaques { display: flex; gap: 12px; margin-top: 12px; }
+.insta-destaques span {
+  width: 40px; height: 40px; border-radius: 50%;
+  box-shadow: 0 0 0 2px #ffffff, 0 0 0 3px #dbdbdf;
+  margin: 3px;
+}
+
+.insta-abas { display: grid; grid-template-columns: repeat(3, 1fr); margin: 12px -12px 0; border-top: 1px solid #ececef; }
+.insta-abas span { height: 26px; position: relative; }
+.insta-abas span::after {
+  content: ""; position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%);
+  width: 11px; height: 11px; border: 1.6px solid #b4b4ba; border-radius: 2px;
+}
+.insta-abas .ativa { box-shadow: inset 0 1px 0 #0f0f10; }
+.insta-abas .ativa::after { border-color: #0f0f10; }
+
+.insta-grade { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; margin: 0 -12px; }
+.insta-grade span { aspect-ratio: 1; }
+
 /* ---------------- Responsivo ---------------- */
 @media (max-width: 900px) {
   .hero-grade { grid-template-columns: minmax(0, 1fr); }
@@ -687,6 +770,18 @@ a { color: inherit; text-decoration: none; }
 @media (max-width: 760px) {
   .publico { justify-content: center; }
   .publico li { font-size: 15px; padding: 9px 15px; }
+}
+
+/* entre o desktop largo e o empilhado a coluna do hero fica estreita */
+@media (min-width: 901px) and (max-width: 1100px) {
+  .hero-visual { --desloc-site: 12%; --desloc-insta: -30%; --escala-insta: .75; }
+}
+@media (max-width: 900px) {
+  .hero-visual { --desloc-site: 16%; }
+}
+/* no celular o Instagram fica menor, sobre o canto de baixo do minisitee */
+@media (max-width: 560px) {
+  .hero-visual { --desloc-site: 8%; --desloc-insta: -25%; --desce-insta: 18%; --escala-insta: .7; }
 }
 
 @media (max-width: 480px) {
