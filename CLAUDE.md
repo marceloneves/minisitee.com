@@ -48,8 +48,9 @@ projeto, e não é preciso acessar o servidor.
   (*"Adiciona"*, *"Corrige"*, *"Remove"*).
 - Textos do site em português do Brasil.
 - Todo link do site abre em nova aba (`target="_blank" rel="noopener"`),
-  inclusive âncoras e `mailto:`. A única exceção é o link "Pular para o
-  conteúdo".
+  inclusive âncoras e `mailto:`. As exceções são o link "Pular para o
+  conteúdo" e os itens do menu do topo (`<nav class="menu">`), que abrem na
+  mesma página.
 - Posts do blog ficam em `blog/<slug>/index.html`, listados em
   `blog/index.html` e no `sitemap-paginas.xml`.
 - Os arquivos `robots.txt` e `sitemap*.xml` usam URLs absolutas em
