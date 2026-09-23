@@ -561,11 +561,29 @@ a { color: inherit; text-decoration: none; }
 .passo strong { color: var(--fg); font-weight: 600; }
 
 /* ---------------- Vídeo ---------------- */
+.pratica { display: grid; grid-template-columns: minmax(0, 1fr) 360px; gap: clamp(40px, 6vw, 88px); align-items: center; }
+.pratica .titulo-secao { margin-bottom: 28px; }
+.roteiro { display: grid; gap: 14px; margin-bottom: 32px; counter-reset: r; }
+.roteiro li {
+  position: relative; padding-left: 42px; font-size: 16.5px; color: var(--muted); counter-increment: r;
+}
+.roteiro li::before {
+  content: counter(r); position: absolute; left: 0; top: -2px;
+  display: grid; place-items: center; width: 28px; height: 28px;
+  border-radius: 50%; background: var(--fg); color: var(--bg); font-size: 14px; font-weight: 600;
+}
+.roteiro strong { color: var(--fg); font-weight: 600; }
 .video {
-  position: relative; aspect-ratio: 9 / 16; max-width: 360px; margin-inline: auto;
+  position: relative; aspect-ratio: 9 / 16; width: 100%; max-width: 360px; margin-inline: auto;
   border-radius: var(--r-lg); overflow: hidden; border: 1px solid var(--border); background: #000;
 }
 .video iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; }
+
+@media (max-width: 900px) {
+  .pratica { grid-template-columns: minmax(0, 1fr); }
+  .pratica-texto { max-width: 560px; margin-inline: auto; }
+  .pratica-texto > .btn { display: flex; width: fit-content; margin-inline: auto; }
+}
 
 /* ---------------- Público ---------------- */
 .publico { display: flex; flex-wrap: wrap; gap: 10px; }
