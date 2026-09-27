@@ -961,7 +961,20 @@ a { color: inherit; text-decoration: none; }
   transition: transform .15s ease, background-color .15s ease;
 }
 .whatsapp-flutuante svg { width: 30px; height: 30px; }
-.whatsapp-flutuante:hover { background: #1ebe5a; transform: scale(1.06); }
+.whatsapp-flutuante:hover { background: #1ebe5a; transform: scale(1.06); animation: none; }
+
+/* Vibra por um instante a cada 4 segundos, para chamar a atenção */
+.whatsapp-flutuante { animation: vibrar 4s ease-in-out 1s infinite; }
+@keyframes vibrar {
+  0%, 16%, 100% { transform: rotate(0); }
+  2%  { transform: rotate(-14deg) scale(1.08); }
+  4%  { transform: rotate(12deg) scale(1.08); }
+  6%  { transform: rotate(-12deg) scale(1.08); }
+  8%  { transform: rotate(10deg) scale(1.08); }
+  10% { transform: rotate(-8deg) scale(1.04); }
+  12% { transform: rotate(6deg); }
+  14% { transform: rotate(-3deg); }
+}
 
 /* Enquanto o aviso de cookies está aberto, o botão fica acima dele
    (no desktop largo o aviso fica centralizado e não chega ao canto) */
@@ -972,7 +985,7 @@ a { color: inherit; text-decoration: none; }
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .whatsapp-flutuante { transition: none; }
+  .whatsapp-flutuante { transition: none; animation: none; }
   .whatsapp-flutuante:hover { transform: none; }
 }
 
