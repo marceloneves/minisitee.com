@@ -950,6 +950,37 @@ a { color: inherit; text-decoration: none; }
 .artigo-cta p { margin: 10px auto 22px; max-width: 30em; color: var(--muted); }
 
 
+/* ================= Botão flutuante de WhatsApp ================= */
+.whatsapp-flutuante {
+  position: fixed; right: 20px; bottom: 20px; z-index: 55;
+  width: 58px; height: 58px; border-radius: 50%;
+  display: grid; place-items: center;
+  /* mesmo verde do botão do app (.zap) */
+  background: #25d366; color: #ffffff;
+  box-shadow: var(--sombra-2);
+  transition: transform .15s ease, background-color .15s ease;
+}
+.whatsapp-flutuante svg { width: 30px; height: 30px; }
+.whatsapp-flutuante:hover { background: #1ebe5a; transform: scale(1.06); }
+
+/* Enquanto o aviso de cookies está aberto, o botão fica acima dele
+   (no desktop largo o aviso fica centralizado e não chega ao canto) */
+@media (max-width: 800px) {
+  body.com-aviso-cookies .whatsapp-flutuante {
+    bottom: calc(var(--altura-aviso, 140px) + 28px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .whatsapp-flutuante { transition: none; }
+  .whatsapp-flutuante:hover { transform: none; }
+}
+
+@media print {
+  .whatsapp-flutuante { display: none; }
+}
+
+
 /* ================= Aviso de cookies ================= */
 /* Só informa: um botão "Entendi" fecha o aviso. */
 .aviso-cookies {
