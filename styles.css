@@ -963,17 +963,11 @@ a { color: inherit; text-decoration: none; }
 .whatsapp-flutuante svg { width: 30px; height: 30px; }
 .whatsapp-flutuante:hover { background: #1ebe5a; }
 
-/* Treme o tempo todo, sem pausa, para chamar a atenção */
-.whatsapp-flutuante { animation: vibrar .8s ease-in-out infinite; }
-@keyframes vibrar {
-  0%, 100% { transform: rotate(0) scale(1.06); }
-  12.5% { transform: rotate(-14deg) scale(1.1); }
-  25%   { transform: rotate(12deg) scale(1.06); }
-  37.5% { transform: rotate(-12deg) scale(1.1); }
-  50%   { transform: rotate(10deg) scale(1.06); }
-  62.5% { transform: rotate(-10deg) scale(1.1); }
-  75%   { transform: rotate(8deg) scale(1.06); }
-  87.5% { transform: rotate(-6deg) scale(1.08); }
+/* Pulsa o tempo todo, como um coração batendo, para chamar a atenção */
+.whatsapp-flutuante { animation: pulsar 1.5s ease-in-out infinite; }
+@keyframes pulsar {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.15); }
 }
 
 /* Enquanto o aviso de cookies está aberto, o botão fica acima dele
@@ -984,10 +978,10 @@ a { color: inherit; text-decoration: none; }
   }
 }
 
-/* Treme mesmo com "Reduzir movimento" ligado: a regra geral lá em cima
+/* Pulsa mesmo com "Reduzir movimento" ligado: a regra geral lá em cima
    encurta todas as animações, aqui o botão fica de fora */
 @media (prefers-reduced-motion: reduce) {
-  .whatsapp-flutuante { animation-duration: .8s !important; }
+  .whatsapp-flutuante { animation-duration: 1.5s !important; }
 }
 
 @media print {
